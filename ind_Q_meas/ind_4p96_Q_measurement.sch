@@ -30,10 +30,28 @@ C {devices/lab_pin.sym} 360 0 2 0 {name=l2 sig_type=std_logic lab=negative
 C {devices/isource.sym} 130 -50 2 0 {name=Iin value="0 ac 1"}
 C {devices/gnd.sym} 130 -10 0 0 {name=l2 lab=GND}
 C {devices/gnd.sym} 360 20 0 0 {name=l2 lab=GND}
-C {devices/code_shown.sym} -330 -50 0 0 {name=s1 only_toplevel=false value="
+C {devices/code_shown.sym} -310 -330 0 0 {name=s1 only_toplevel=false value="
+.lib ~/tools/open_pdks/sky130/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+.include /home/vakumar/tools/open_pdks/sky130/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__ind_05_220.model.spice
 .ac dec 100 10meg 10G
 .control
 run
-plot V(positive)
+plot 20*log(V(positive))
+
+let Z=mag(v(positive))
+let Zmax=maximum(Z)
+let Z3dB=maximum(Z)/1.414
+meas ac Fl when Z=Z3dB RISE=1
+*Fl - lower 3dB freq
+
+meas ac Fh when Z=Z3dB FALL=1
+*Fh - higher 3dB freq
+
+meas ac FC max_at Z
+*Fc - resonating frequency
+
+let Q=Fc/(Fh-Fl)
+
+print Q
 .endc
 "}
