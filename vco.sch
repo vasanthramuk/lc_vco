@@ -53,6 +53,9 @@ N 730 -620 730 -600 {
 lab=vdd}
 N 1110 -450 1110 -420 {
 lab=gnd}
+N 1110 -840 1110 -820 {}
+N 1140 -800 1190 -800 {}
+N 1030 -800 1080 -800 {}
 C {devices/code.sym} 350 -770 0 0 {name=SPICE only_toplevel=false value=
 "
 .option wnflag = 1
@@ -118,3 +121,8 @@ footprint=1206
 device="ceramic capacitor"}
 C {devices/gnd.sym} 1110 -420 0 0 {name=l1 lab=GND}
 C {devices/lab_pin.sym} 1110 -430 0 0 {name=l1 sig_type=std_logic lab=gnd}
+C {symbols/ind_05.sym} 1110 -800 1 0 {name=L1
+body=GND
+model=ind_05_220
+spiceprefix=X
+}
