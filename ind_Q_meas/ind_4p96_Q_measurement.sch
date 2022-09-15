@@ -1,4 +1,4 @@
-v {xschem version=3.1.0 file_version=1.2
+v {xschem version=3.1.0 file_version=1.2 
 }
 G {}
 K {}
@@ -65,7 +65,7 @@ let Q=Fc/(Fh-Fl)
 print Q
 .endc
 "}
-C {/home/luminatrix/Documents/designs/lc_vco/symbols/ind_05.sym} 360 -60 0 0 {name=L1
+C {../symbols/ind_05.sym} 360 -60 0 0 {name=L1
 body=GND
 model=ind_05_220
 spiceprefix=X

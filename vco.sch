@@ -1,4 +1,4 @@
-v {xschem version=3.1.0 file_version=1.2
+v {xschem version=3.1.0 file_version=1.2 
 }
 G {}
 K {}
@@ -50,17 +50,11 @@ lab=vdd}
 N 1110 -450 1110 -420 {
 lab=gnd}
 N 1010 -610 1030 -610 {
-lab=#net1}
+lab=gnd}
 N 1010 -610 1010 -550 {
-lab=#net1}
-N 1010 -550 1030 -550 {
-lab=#net1}
+lab=gnd}
 N 1190 -610 1210 -610 {
-lab=#net1}
-N 1210 -610 1210 -550 {
-lab=#net1}
-N 1190 -550 1210 -550 {
-lab=#net1}
+lab=gnd}
 N 1190 -840 1190 -820 {
 lab=Vdd}
 N 1030 -840 1030 -820 {
@@ -86,6 +80,8 @@ lab=Vdd}
 N 930 -650 1030 -650 {
 lab=vout-}
 N 930 -590 930 -550 {
+lab=gnd}
+N 1210 -610 1210 -550 {
 lab=gnd}
 C {devices/code.sym} 1410 -810 0 0 {name=LIBS only_toplevel=false value=
 "
@@ -151,10 +147,12 @@ spiceprefix=X
 C {devices/code_shown.sym} 1420 -640 0 0 {name=SPICE only_toplevel=false 
 value=
 "
-.tran 1n 50n
+.tran 100p 50n
 .save all
 "}
 C {devices/lab_pin.sym} 1270 -690 1 0 {name=l2 sig_type=std_logic lab=vout+}
 C {devices/lab_pin.sym} 970 -690 1 0 {name=l2 sig_type=std_logic lab=vout-}
 C {devices/isource.sym} 930 -620 0 0 {name=I1 value= "PULSE(0 1 10n 1n 1n 5n)"}
 C {devices/lab_pin.sym} 930 -560 0 0 {name=l2 sig_type=std_logic lab=gnd}
+C {devices/lab_pin.sym} 1010 -560 0 0 {name=l2 sig_type=std_logic lab=gnd}
+C {devices/lab_pin.sym} 1210 -560 2 0 {name=l2 sig_type=std_logic lab=gnd}
