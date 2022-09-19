@@ -29,7 +29,7 @@ C {devices/code_shown.sym} 590 -100 0 0 {name=SPICE only_toplevel=false
 value=
 "
 .control
-foreach vctrl -1 -0.5 0 0.5 1
+foreach vctrl 0 0.5 1 1.8 1
 	echo
 	echo
 	echo Vctrl is $vctrl
@@ -63,4 +63,4 @@ C {devices/vsource.sym} 10 90 0 0 {name=V2 value="2 ac 1"}
 C {devices/lab_pin.sym} 140 20 1 0 {name=l1 sig_type=std_logic lab=vc
 }
 C {devices/gnd.sym} 10 140 0 0 {name=l2 lab=GND}
-C {sky130_fd_pr/cap_var_lvt.sym} 230 100 0 0 {name=C1 model=cap_var_lvt W=0.5 L=0.5 VM=1 spiceprefix=X}
+C {sky130_fd_pr/cap_var_hvt.sym} 230 100 0 0 {name=C1 model=cap_var_hvt W=5 L=5 VM=1 spiceprefix=X}

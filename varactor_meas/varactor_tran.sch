@@ -51,6 +51,6 @@ C {devices/code.sym} 570 -270 0 0 {name=LIBS only_toplevel=false value=
 C {devices/lab_pin.sym} 140 20 1 0 {name=l1 sig_type=std_logic lab=vc
 }
 C {devices/gnd.sym} 10 140 0 0 {name=l2 lab=GND}
-C {sky130_fd_pr/cap_var_lvt.sym} 230 100 0 0 {name=C1 model=cap_var_lvt W=5 L=5 VM=1 spiceprefix=X}
+C {sky130_fd_pr/cap_var_lvt.sym} 230 100 0 0 {name=C1 model=cap_var_lvt W=10 L=10 VM=1 spiceprefix=X}
 C {devices/isource.sym} 10 90 2 0 {name=I0 value="pwl 0 0 1n 100n"}
 C {devices/vsource.sym} 90 20 3 0 {name=V1 value=0}
