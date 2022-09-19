@@ -23,23 +23,15 @@ N 1030 -690 1030 -640 {
 lab=vout-}
 N 1030 -580 1030 -550 {
 lab=vp}
-N 1030 -550 1190 -550 {
+N 1110 -550 1190 -550 {
 lab=vp}
 N 1190 -580 1190 -550 {
 lab=vp}
-N 1110 -550 1110 -510 {
-lab=vp}
-N 1110 -520 1110 -510 {
-lab=vp}
-N 1190 -720 1190 -690 {
-lab=vout+}
-N 1030 -720 1030 -690 {
-lab=vout-}
 N 920 -690 1030 -690 {
 lab=vout-}
 N 1190 -690 1300 -690 {
 lab=vout+}
-N 1030 -950 1190 -950 {
+N 1110 -950 1190 -950 {
 lab=Vdd}
 N 1110 -990 1110 -950 {
 lab=VDD}
@@ -59,27 +51,31 @@ N 1190 -950 1190 -930 {
 lab=Vdd}
 N 1030 -950 1030 -930 {
 lab=Vdd}
-N 1190 -870 1190 -850 {
+N 1190 -870 1190 -790 {
 lab=vout+}
-N 1190 -740 1190 -720 {
-lab=vout+}
-N 1030 -870 1030 -850 {
-lab=vout-}
-N 1030 -740 1030 -720 {
+N 1030 -870 1030 -790 {
 lab=vout-}
 N 1210 -610 1210 -550 {
 lab=gnd}
-N 1030 -850 1030 -740 {
+N 1030 -790 1030 -690 {
 lab=vout-}
-N 1190 -850 1190 -740 {
+N 1190 -790 1190 -690 {
 lab=vout+}
-N 1100 -790 1120 -790 {
+N 1110 -790 1120 -790 {
 lab=Vdd}
 N 1030 -790 1040 -790 {
 lab=vout-}
 N 1180 -790 1190 -790 {
 lab=vout+}
 N 1110 -950 1110 -790 {
+lab=Vdd}
+N 1030 -550 1110 -550 {
+lab=vp}
+N 1110 -550 1110 -510 {
+lab=vp}
+N 1030 -950 1110 -950 {
+lab=Vdd}
+N 1100 -790 1110 -790 {
 lab=Vdd}
 C {devices/code.sym} 1410 -810 0 0 {name=LIBS only_toplevel=false value=
 "
@@ -141,7 +137,7 @@ C {devices/code_shown.sym} 1420 -640 0 0 {name=SPICE only_toplevel=false
 value=
 "
 .control
-tran 100p 50n
+tran 100p 100u
 run
 save all
 plot v(vout+)-v(vout-)
