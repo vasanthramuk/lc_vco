@@ -58,6 +58,7 @@ C {devices/code.sym} 570 -270 0 0 {name=LIBS only_toplevel=false value=
 "
 .option wnflag = 1
 .lib /usr/local/share/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+.lib /usr/local/share/pdk/sky130A/libs.ref/spice
 .include /usr/local/share/pdk/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__ind_05_220.model.spice
 .param mc_mm_switch=0
 "
@@ -66,4 +67,4 @@ C {devices/vsource.sym} 10 90 0 0 {name=V2 value="2 ac 1"}
 C {devices/lab_pin.sym} 140 20 1 0 {name=l1 sig_type=std_logic lab=vc
 }
 C {devices/gnd.sym} 10 140 0 0 {name=l2 lab=GND}
-C {sky130_fd_pr/cap_var_lvt.sym} 230 100 0 0 {name=C1 model=cap_var_lvt W=25 L=25 VM=1 spiceprefix=X}
+C {sky130_fd_pr/cap_var_hvt.sym} 230 100 0 0 {name=C1 model=cap_var_hvt W=0.5 L=0.5 VM=1 spiceprefix=X}
