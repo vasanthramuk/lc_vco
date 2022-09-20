@@ -1,4 +1,4 @@
-v {xschem version=3.1.0 file_version=1.2 
+v {xschem version=3.1.0 file_version=1.2
 }
 G {}
 K {}
@@ -145,16 +145,6 @@ C {devices/code.sym} 1410 -810 0 0 {name=LIBS only_toplevel=false value=
 }
 C {devices/isource.sym} 1110 -480 0 0 {name=I0 value=5m}
 C {devices/vdd.sym} 1110 -990 0 0 {name=l1 lab=VDD}
-C {devices/capa.sym} 1030 -900 0 0 {name=C1
-m=1
-value=2p
-footprint=1206
-device="ceramic capacitor"}
-C {devices/capa.sym} 1190 -900 0 0 {name=C2
-m=1
-value=2p
-footprint=1206
-device="ceramic capacitor"}
 C {devices/gnd.sym} 1110 -420 0 0 {name=l1 lab=GND}
 C {devices/lab_pin.sym} 1110 -430 0 0 {name=l1 sig_type=std_logic lab=gnd}
 C {devices/code_shown.sym} 1420 -640 0 0 {name=SPICE only_toplevel=false 
@@ -173,12 +163,12 @@ C {devices/lab_pin.sym} 970 -690 1 0 {name=l2 sig_type=std_logic lab=vout-}
 C {devices/vccs.sym} 1030 -610 0 1 {name=G1 value=1e-2}
 C {devices/vccs.sym} 1190 -610 0 0 {name=G2 value=1e-2}
 C {devices/res.sym} 960 -910 0 0 {name=R3
-value=120
+value=102
 footprint=1206
 device=resistor
 m=1}
 C {devices/res.sym} 1270 -910 0 1 {name=R4
-value=120
+value=102
 footprint=1206
 device=resistor
 m=1}
