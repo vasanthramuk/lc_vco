@@ -18,18 +18,22 @@ N 230 30 230 40 {
 lab=vc}
 N 230 40 230 70 {
 lab=vc}
-N 230 130 230 170 {
-lab=GND}
 N 190 120 190 160 {
 lab=GND}
-N 190 160 230 160 {
+N 230 130 270 130 {
+lab=#net1}
+N 270 130 270 160 {
+lab=#net1}
+N 190 160 190 170 {
 lab=GND}
-C {devices/gnd.sym} 230 170 0 0 {name=l1 lab=GND}
+N 270 220 270 230 {
+lab=GND}
+C {devices/gnd.sym} 190 170 0 0 {name=l1 lab=GND}
 C {devices/code_shown.sym} 590 -100 0 0 {name=SPICE only_toplevel=false 
 value=
 "
 .control
-foreach vctrl 0 0.5 1 1.8 1
+foreach vctrl 1 1.5 2 2.8
 	echo
 	echo
 	echo Vctrl is $vctrl
@@ -63,4 +67,6 @@ C {devices/vsource.sym} 10 90 0 0 {name=V2 value="2 ac 1"}
 C {devices/lab_pin.sym} 140 20 1 0 {name=l1 sig_type=std_logic lab=vc
 }
 C {devices/gnd.sym} 10 140 0 0 {name=l2 lab=GND}
-C {sky130_fd_pr/cap_var_hvt.sym} 230 100 0 0 {name=C1 model=cap_var_hvt W=5 L=5 VM=1 spiceprefix=X}
+C {sky130_fd_pr/cap_var_lvt.sym} 230 100 0 0 {name=C2 model=cap_var_lvt W=5 L=5 VM=1 spiceprefix=X}
+C {devices/vsource.sym} 270 190 0 0 {name=V1 value="1"}
+C {devices/gnd.sym} 270 230 0 0 {name=l2 lab=GND}
