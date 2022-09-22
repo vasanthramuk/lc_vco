@@ -153,6 +153,7 @@ value=
 .control
 tran 10p 300n
 run
+dc vcntrl 0.25 
 save all
 plot v(vout+)-v(vout-)
 plot vp

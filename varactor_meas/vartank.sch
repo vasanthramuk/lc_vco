@@ -61,9 +61,9 @@ plot 10*log10(mag(v(vsup)))
 .endc
 "}
 C {sky130_fd_pr/cap_var_lvt.sym} 230 200 0 0 {name=C1 model=cap_var_lvt W=0.5 L=0.5 VM=1 spiceprefix=X}
-C {devices/vsource.sym} 230 100 2 0 {name=V1 value=2}
-C {/home/luminatrix/Documents/designs/lc_vco/symbols/ind_05.sym} 340 100 0 0 {name=L2
-body=GND
-model=ind_05_220
-spiceprefix=X
-}
+C {devices/vsource.sym} 230 100 2 0 {name=V1 value=0}
+C {devices/ind.sym} 340 100 0 0 {name=L1
+m=1
+value=100n
+footprint=1206
+device=inductor}
