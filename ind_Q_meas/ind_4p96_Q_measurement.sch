@@ -10,7 +10,7 @@ lab=positive}
 N 270 -60 340 -60 {
 lab=center_tap}
 N 130 -20 130 -10 {
-lab=GND}
+lab=#net1}
 N 130 -130 130 -80 {
 lab=positive}
 N 130 -130 360 -130 {
@@ -20,7 +20,7 @@ lab=GND}
 N 270 -60 270 20 {
 lab=center_tap}
 N 500 0 500 10 {
-lab=GND}
+lab=#net1}
 N 420 -60 500 -60 {
 lab=negative}
 N 420 -60 420 -0 {
@@ -29,6 +29,16 @@ N 360 -0 420 0 {
 lab=negative}
 N 360 -30 360 -0 {
 lab=negative}
+N 270 -70 270 -60 {
+lab=center_tap}
+N 270 -20 300 -20 {
+lab=center_tap}
+N 500 10 500 70 {
+lab=#net1}
+N 130 70 500 70 {
+lab=#net1}
+N 130 -20 130 70 {
+lab=#net1}
 C {devices/lab_pin.sym} 360 -120 0 0 {name=l2 sig_type=std_logic lab=positive
 }
 C {devices/lab_pin.sym} 290 -60 3 0 {name=l2 sig_type=std_logic lab=center_tap
@@ -36,7 +46,6 @@ C {devices/lab_pin.sym} 290 -60 3 0 {name=l2 sig_type=std_logic lab=center_tap
 C {devices/lab_pin.sym} 360 0 2 0 {name=l2 sig_type=std_logic lab=negative
 }
 C {devices/isource.sym} 130 -50 2 0 {name=Iin value="0 ac 1"}
-C {devices/gnd.sym} 130 -10 0 0 {name=l2 lab=GND}
 C {devices/gnd.sym} 360 20 0 0 {name=l2 lab=GND}
 C {devices/code_shown.sym} -310 -330 0 0 {name=s1 only_toplevel=false value="
 .lib /usr/local/share/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice tt
@@ -71,4 +80,13 @@ model=ind_05_220
 spiceprefix=X
 }
 C {devices/isource.sym} 500 -30 0 0 {name=Iin1 value="0 ac 1"}
-C {devices/gnd.sym} 500 10 0 0 {name=l2 lab=GND}
+C {devices/capa.sym} 270 -100 0 0 {name=C1
+m=1
+value=1.2767p
+footprint=1206
+device="ceramic capacitor"}
+C {devices/capa.sym} 330 -20 1 0 {name=C2
+m=1
+value=1.2767p
+footprint=1206
+device="ceramic capacitor"}
