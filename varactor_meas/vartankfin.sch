@@ -1,4 +1,4 @@
-v {xschem version=3.1.0 file_version=1.2 
+v {xschem version=3.1.0 file_version=1.2
 }
 G {}
 K {}
@@ -51,24 +51,16 @@ C {devices/gnd.sym} 230 270 0 0 {name=l2 lab=GND}
 C {devices/lab_pin.sym} 230 30 0 0 {name=l2 sig_type=std_logic lab=vsup}
 C {devices/lab_pin.sym} 340 150 0 0 {name=l2 sig_type=std_logic lab=gnd}
 C {devices/lab_pin.sym} 230 240 0 0 {name=l2 sig_type=std_logic lab=gnd}
-C {devices/isource.sym} 420 60 2 0 {name=I0 value="ac 1"}
-C {sky130_fd_pr/cap_var_lvt.sym} 230 200 0 0 {name=C1 model=cap_var_lvt W=100 L=0.5 VM=1 spiceprefix=X}
-C {devices/vsource.sym} 230 100 2 0 {name=V2 value=0}
-C {devices/ind.sym} 340 100 0 0 {name=L1
-m=1
-value=4.96n
-footprint=1206
-device=inductor}
+C {devices/isource.sym} 420 60 2 0 {name=I0 value="dc 0 ac 1"}
+C {sky130_fd_pr/cap_var_lvt.sym} 230 200 0 0 {name=C1 model=cap_var_lvt W=350 L=2 VM=1 spiceprefix=X}
+C {devices/vsource.sym} 230 100 2 0 {name=V2 value=1.8}
 C {devices/code_shown.sym} 960 -240 0 0 {name=SPICE1 only_toplevel=false 
 value=
 "
 .control
-foreach vctrl 0 0.5 1 1.8 1
 	echo
 	echo
-	echo Vctrl is $vctrl
-	alter @V2[dc] = $vctrl
-	ac dec 100 1meg 5G
+	ac lin 10000 500meg 2G
 	let Z = mag(V(vsup))
 	plot 20*log10(abs(Z)) title db_of_Z
 	*plot phase(Z)*180/pi ylimit -100 100 title phase_of_Z
@@ -97,7 +89,6 @@ foreach vctrl 0 0.5 1 1.8 1
 
 	print Q
 
-end
 save all
 .endc
 "}
@@ -106,3 +97,8 @@ m=1
 value=2p
 footprint=1206
 device="ceramic capacitor"}
+C {/home/luminatrix/Documents/designs/lc_vco/symbols/ind_05.sym} 340 100 0 0 {name=L1
+body=GND
+model=ind_05_220
+spiceprefix=X
+}
