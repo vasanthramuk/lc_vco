@@ -6,21 +6,21 @@ V {}
 S {}
 E {}
 N 1070 -610 1090 -610 {
-lab=vout+}
+lab=vout_p}
 N 1090 -610 1160 -690 {
-lab=vout+}
+lab=vout_p}
 N 1160 -690 1190 -690 {
-lab=vout+}
+lab=vout_p}
 N 1190 -690 1190 -640 {
-lab=vout+}
+lab=vout_p}
 N 1130 -610 1150 -610 {
-lab=vout-}
+lab=vout_m}
 N 1050 -690 1130 -610 {
-lab=vout-}
+lab=vout_m}
 N 1030 -690 1050 -690 {
-lab=vout-}
+lab=vout_m}
 N 1030 -690 1030 -640 {
-lab=vout-}
+lab=vout_m}
 N 1030 -580 1030 -550 {
 lab=vp}
 N 1030 -550 1190 -550 {
@@ -30,13 +30,13 @@ lab=vp}
 N 1110 -520 1110 -510 {
 lab=vp}
 N 1190 -720 1190 -690 {
-lab=vout+}
+lab=vout_p}
 N 1030 -720 1030 -690 {
-lab=vout-}
+lab=vout_m}
 N 920 -690 1030 -690 {
-lab=vout-}
+lab=vout_m}
 N 1190 -690 1300 -690 {
-lab=vout+}
+lab=vout_p}
 N 1030 -950 1190 -950 {
 lab=VDD}
 N 1110 -990 1110 -950 {
@@ -52,13 +52,13 @@ lab=VDD}
 N 1030 -950 1030 -930 {
 lab=VDD}
 N 1190 -870 1190 -850 {
-lab=vout+}
+lab=vout_p}
 N 1030 -870 1030 -850 {
-lab=vout-}
+lab=vout_m}
 N 1070 -630 1070 -610 {
-lab=vout+}
+lab=vout_p}
 N 1150 -630 1150 -610 {
-lab=vout-}
+lab=vout_m}
 N 1150 -590 1150 -570 {
 lab=vp}
 N 1070 -590 1070 -570 {
@@ -68,9 +68,9 @@ lab=vp}
 N 1070 -570 1070 -550 {
 lab=vp}
 N 870 -690 920 -690 {
-lab=vout-}
+lab=vout_m}
 N 1260 -650 1260 -630 {
-lab=vout+}
+lab=vout_p}
 N 1260 -570 1260 -550 {
 lab=vp}
 N 980 -570 980 -550 {
@@ -78,11 +78,11 @@ lab=vp}
 N 980 -550 1030 -550 {
 lab=vp}
 N 980 -650 980 -630 {
-lab=vout-}
+lab=vout_m}
 N 980 -650 1030 -650 {
-lab=vout-}
+lab=vout_m}
 N 1190 -650 1260 -650 {
-lab=vout+}
+lab=vout_p}
 N 1190 -550 1260 -550 {
 lab=vp}
 N 960 -950 1030 -950 {
@@ -90,23 +90,23 @@ lab=VDD}
 N 960 -950 960 -940 {
 lab=VDD}
 N 960 -880 960 -860 {
-lab=vout-}
+lab=vout_m}
 N 960 -860 1030 -860 {
-lab=vout-}
+lab=vout_m}
 N 1270 -950 1270 -940 {
 lab=VDD}
 N 1270 -880 1270 -860 {
-lab=vout+}
+lab=vout_p}
 N 1190 -950 1270 -950 {
 lab=VDD}
 N 1190 -860 1270 -860 {
-lab=vout+}
+lab=vout_p}
 N 780 -610 780 -590 {
 lab=GND}
 N 780 -690 780 -670 {
-lab=vout-}
+lab=vout_m}
 N 780 -690 870 -690 {
-lab=vout-}
+lab=vout_m}
 N 1110 -550 1110 -520 {
 lab=vp}
 N 870 -950 870 -940 {
@@ -114,25 +114,25 @@ lab=VDD}
 N 870 -950 960 -950 {
 lab=VDD}
 N 870 -880 870 -860 {
-lab=vout-}
+lab=vout_m}
 N 870 -860 960 -860 {
-lab=vout-}
+lab=vout_m}
 N 1270 -950 1350 -950 {
 lab=VDD}
 N 1350 -950 1350 -930 {
 lab=VDD}
 N 1350 -880 1350 -860 {
-lab=vout+}
+lab=vout_p}
 N 1270 -860 1350 -860 {
-lab=vout+}
+lab=vout_p}
 N 1650 -870 1650 -850 {
 lab=vcntrl}
 N 1650 -790 1650 -770 {
 lab=GND}
 N 1030 -850 1030 -720 {
-lab=vout-}
+lab=vout_m}
 N 1190 -850 1190 -720 {
-lab=vout+}
+lab=vout_p}
 N 1090 -750 1130 -750 {
 lab=vcntrl}
 C {devices/code.sym} 1410 -810 0 0 {name=LIBS only_toplevel=false value=
@@ -151,25 +151,32 @@ C {devices/code_shown.sym} 1420 -640 0 0 {name=SPICE only_toplevel=false
 value=
 "
 .control
-tran 10p 300n
-run
-dc vcntrl 0.25 
+let ctrl=0.25
+while ctrl<1.55
+	tran 10p 300n
+	let diff=(v(vout_p)-v(vout_m))
+	fft diff
+	*let m = mag(diff)
+	*meas tran fc max_at m
+	plot mag(diff) title $&ctrl
+	alter v3 dc = $&ctrl
+	let ctrl = ctrl+0.26
+end
 save all
-plot v(vout+)-v(vout-)
-plot vp
+
 .endc
 "}
-C {devices/lab_pin.sym} 1270 -690 1 0 {name=l2 sig_type=std_logic lab=vout+}
-C {devices/lab_pin.sym} 970 -690 1 0 {name=l2 sig_type=std_logic lab=vout-}
+C {devices/lab_pin.sym} 1270 -690 1 0 {name=l3 sig_type=std_logic lab=vout_p}
+C {devices/lab_pin.sym} 970 -690 1 0 {name=l3 sig_type=std_logic lab=vout_m}
 C {devices/vccs.sym} 1030 -610 0 1 {name=G1 value=1e-2}
 C {devices/vccs.sym} 1190 -610 0 0 {name=G2 value=1e-2}
 C {devices/res.sym} 960 -910 0 0 {name=R3
-value=102
+value=100
 footprint=1206
 device=resistor
 m=1}
 C {devices/res.sym} 1270 -910 0 1 {name=R4
-value=102
+value=100
 footprint=1206
 device=resistor
 m=1}
@@ -201,3 +208,13 @@ C {devices/gnd.sym} 650 -740 0 0 {name=l3 lab=GND}
 C {devices/lab_pin.sym} 1110 -750 1 0 {name=l3 sig_type=std_logic lab=vcntrl
 
 }
+C {devices/capa.sym} 1030 -900 0 0 {name=C1
+m=1
+value=1p
+footprint=1206
+device="ceramic capacitor"}
+C {devices/capa.sym} 1190 -900 0 0 {name=C2
+m=1
+value=1p
+footprint=1206
+device="ceramic capacitor"}
