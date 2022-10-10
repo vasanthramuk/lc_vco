@@ -1,4 +1,4 @@
-v {xschem version=3.1.0 file_version=1.2
+v {xschem version=3.1.0 file_version=1.2 
 }
 G {}
 K {}
@@ -30,7 +30,7 @@ C {devices/code_shown.sym} 590 -100 0 0 {name=SPICE only_toplevel=false
 value=
 "
 .control
-foreach vctrl -2 -1 -0.5 0 0.5 1 1.8 2
+foreach vctrl 0.1 0.7 1.7
 	echo
 	echo
 	echo Vctrl is $vctrl

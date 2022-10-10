@@ -51,7 +51,7 @@ C {devices/gnd.sym} 230 270 0 0 {name=l2 lab=GND}
 C {devices/lab_pin.sym} 230 30 0 0 {name=l2 sig_type=std_logic lab=vsup}
 C {devices/lab_pin.sym} 340 150 0 0 {name=l2 sig_type=std_logic lab=gnd}
 C {devices/lab_pin.sym} 230 240 0 0 {name=l2 sig_type=std_logic lab=gnd}
-C {devices/isource.sym} 420 60 2 0 {name=I0 value="ac 1"}
+C {devices/isource.sym} 420 60 2 0 {name=I0 value="dc 0 ac 1"}
 C {sky130_fd_pr/cap_var_lvt.sym} 230 200 0 0 {name=C1 model=cap_var_lvt W=100 L=0.5 VM=1 spiceprefix=X}
 C {devices/vsource.sym} 230 100 2 0 {name=V2 value=0}
 C {devices/ind.sym} 340 100 0 0 {name=L1

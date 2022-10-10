@@ -33,12 +33,12 @@ C {devices/code_shown.sym} 590 -100 0 0 {name=SPICE only_toplevel=false
 value=
 "
 .control
-foreach vctrl 1 1.5 2 2.8
+foreach vctrl 0 0.8 1.8
 	echo
 	echo
 	echo Vctrl is $vctrl
 	alter @V2[dc] = $vctrl
-	ac dec 100 1meg 5G
+	ac lin 10000 1G 2G
 	let Z = -1/i(V2)
 	*plot 20*log10(abs(Z)) title db_of_Z
 	*plot phase(Z)*180/pi ylimit -100 100 title phase_of_Z
@@ -67,6 +67,6 @@ C {devices/vsource.sym} 10 90 0 0 {name=V2 value="2 ac 1"}
 C {devices/lab_pin.sym} 140 20 1 0 {name=l1 sig_type=std_logic lab=vc
 }
 C {devices/gnd.sym} 10 140 0 0 {name=l2 lab=GND}
-C {sky130_fd_pr/cap_var_lvt.sym} 230 100 0 0 {name=C2 model=cap_var_lvt W=5 L=5 VM=1 spiceprefix=X}
-C {devices/vsource.sym} 270 190 0 0 {name=V1 value="1"}
+C {sky130_fd_pr/cap_var_lvt.sym} 230 100 0 0 {name=C2 model=cap_var_lvt W=10 L=0.5 VM=1 spiceprefix=X}
+C {devices/vsource.sym} 270 190 0 0 {name=V1 value=0}
 C {devices/gnd.sym} 270 230 0 0 {name=l2 lab=GND}

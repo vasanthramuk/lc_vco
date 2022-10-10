@@ -28,15 +28,23 @@ N 120 20 140 20 {
 lab=vc}
 N 140 20 230 20 {
 lab=vc}
+N 230 20 280 20 {
+lab=vc}
+N 340 20 400 20 {
+lab=#net2}
+N 400 20 400 50 {
+lab=#net2}
+N 400 110 400 120 {
+lab=GND}
 C {devices/gnd.sym} 230 170 0 0 {name=l1 lab=GND}
 C {devices/code_shown.sym} 590 -100 0 0 {name=SPICE only_toplevel=false 
 value=
 "
 .control
-tran 10n 9u
+tran 0.1n 9u
 plot vc
 let cap = 100n/deriv(vc)
-plot cap vs vc ylimit 0 0.3p
+plot cap vs vc ylimit 0 0.5p xlimit -0.1 1.9
 write
 .endc
 "}
@@ -51,6 +59,13 @@ C {devices/code.sym} 570 -270 0 0 {name=LIBS only_toplevel=false value=
 C {devices/lab_pin.sym} 140 20 1 0 {name=l1 sig_type=std_logic lab=vc
 }
 C {devices/gnd.sym} 10 140 0 0 {name=l2 lab=GND}
-C {sky130_fd_pr/cap_var_lvt.sym} 230 100 0 0 {name=C1 model=cap_var_lvt W=10 L=10 VM=1 spiceprefix=X}
+C {sky130_fd_pr/cap_var_lvt.sym} 230 100 0 0 {name=C1 model=cap_var_lvt W=100 L=0.5 VM=1 spiceprefix=X}
 C {devices/isource.sym} 10 90 2 0 {name=I0 value="pwl 0 0 1n 100n"}
 C {devices/vsource.sym} 90 20 3 0 {name=V1 value=0}
+C {devices/res.sym} 310 20 1 0 {name=R1
+value=100G
+footprint=1206
+device=resistor
+m=1}
+C {devices/vsource.sym} 400 80 0 0 {name=V2 value=0}
+C {devices/gnd.sym} 400 120 0 0 {name=l1 lab=GND}

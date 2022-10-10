@@ -1,4 +1,4 @@
-v {xschem version=3.1.0 file_version=1.2
+v {xschem version=3.1.0 file_version=1.2 
 }
 G {}
 K {}
@@ -46,7 +46,7 @@ lab=GND}
 N 650 -840 650 -820 {
 lab=VDD}
 N 1110 -450 1110 -420 {
-lab=gnd}
+lab=GND}
 N 1190 -950 1190 -930 {
 lab=VDD}
 N 1030 -950 1030 -930 {
@@ -67,8 +67,6 @@ N 1150 -570 1150 -550 {
 lab=vp}
 N 1070 -570 1070 -550 {
 lab=vp}
-N 870 -690 920 -690 {
-lab=vout_m}
 N 1260 -650 1260 -630 {
 lab=vout_p}
 N 1260 -570 1260 -550 {
@@ -101,12 +99,6 @@ N 1190 -950 1270 -950 {
 lab=VDD}
 N 1190 -860 1270 -860 {
 lab=vout_p}
-N 780 -610 780 -590 {
-lab=GND}
-N 780 -690 780 -670 {
-lab=vout_m}
-N 780 -690 870 -690 {
-lab=vout_m}
 N 1110 -550 1110 -520 {
 lab=vp}
 N 870 -950 870 -940 {
@@ -135,6 +127,12 @@ N 1190 -850 1190 -720 {
 lab=vout_p}
 N 1090 -750 1130 -750 {
 lab=vcntrl}
+N 710 -690 860 -690 {
+lab=vout_m}
+N 710 -690 710 -680 {
+lab=vout_m}
+N 860 -690 920 -690 {
+lab=vout_m}
 C {devices/code.sym} 1410 -810 0 0 {name=LIBS only_toplevel=false value=
 "
 .option wnflag = 1
@@ -146,23 +144,26 @@ C {devices/code.sym} 1410 -810 0 0 {name=LIBS only_toplevel=false value=
 C {devices/isource.sym} 1110 -480 0 0 {name=I0 value=5m}
 C {devices/vdd.sym} 1110 -990 0 0 {name=l1 lab=VDD}
 C {devices/gnd.sym} 1110 -420 0 0 {name=l1 lab=GND}
-C {devices/lab_pin.sym} 1110 -430 0 0 {name=l1 sig_type=std_logic lab=gnd}
 C {devices/code_shown.sym} 1420 -640 0 0 {name=SPICE only_toplevel=false 
 value=
 "
 .control
-let ctrl=0.25
-while ctrl<1.55
-	tran 10p 300n
+let ctrl=1.8
+while ctrl ge 0
+	tran 0.1p 50n
 	let diff=(v(vout_p)-v(vout_m))
-	plot v(vout_p) 
+	*plot v(vout_p)
 	plot diff
-	fft diff
-	*let m = mag(diff)
-	*meas tran fc max_at m
-	plot mag(diff) title $&ctrl
-	alter v3 dc = $&ctrl
-	let ctrl = ctrl+0.26
+	
+	let vcap = 1.8-ctrl
+	echo ctrl is $&ctrl. vcap is $&vcap
+	meas tran tperiod TRIG diff VAL=0 CROSS=100 TARG diff VAL=0 CROSS=102
+	let freq = 1/tperiod
+	echo frequency is $&freq
+	*meas tran vpp TRIG diff VAL=O CROSS=7 TARG diff VAL=0 CROSS=11
+
+	let ctrl = ctrl-1.8
+	alter v3 dc = ctrl
 end
 save all
 
@@ -182,8 +183,6 @@ value=110
 footprint=1206
 device=resistor
 m=1}
-C {devices/gnd.sym} 780 -590 0 0 {name=l4 lab=GND}
-C {devices/isource.sym} 780 -640 0 0 {name=I1 value="PULSE( 0 1 0n 1n 1n 1n )"}
 C {devices/lab_pin.sym} 1140 -550 3 0 {name=l3 sig_type=std_logic lab=vp}
 C {devices/ind.sym} 870 -910 0 0 {name=L1
 m=1
@@ -195,15 +194,15 @@ m=1
 value=4.96n
 footprint=1206
 device=inductor}
-C {devices/vsource.sym} 650 -790 0 0 {name=V2 value=1.8}
-C {devices/vsource.sym} 1650 -820 0 0 {name=V3 value=0}
+C {devices/vsource.sym} 650 -790 0 0 {name=V2 value="pwl(0 0 1n 1.8)"}
+C {devices/vsource.sym} 1650 -820 0 0 {name=V3 value=1.8}
 C {devices/gnd.sym} 1650 -770 0 0 {name=l3 lab=GND}
 C {devices/lab_pin.sym} 1650 -860 0 0 {name=l3 sig_type=std_logic lab=vcntrl
 
 }
 C {devices/vdd.sym} 650 -840 0 0 {name=l3 lab=VDD}
-C {sky130_fd_pr/cap_var_lvt.sym} 1060 -750 3 0 {name=C5 model=cap_var_lvt W=25 L=2 VM=1 spiceprefix=X}
-C {sky130_fd_pr/cap_var_lvt.sym} 1160 -750 1 1 {name=C6 model=cap_var_lvt W=25 L=5 VM=1 spiceprefix=X}
+C {sky130_fd_pr/cap_var_lvt.sym} 1060 -750 3 0 {name=C5 model=cap_var_lvt W=10 L=0.5 VM=1 spiceprefix=X}
+C {sky130_fd_pr/cap_var_lvt.sym} 1160 -750 1 1 {name=C6 model=cap_var_lvt W=10 L=0.5 VM=1 spiceprefix=X}
 C {devices/gnd.sym} 1080 -710 0 0 {name=l3 lab=GND}
 C {devices/gnd.sym} 1140 -710 0 0 {name=l3 lab=GND}
 C {devices/gnd.sym} 650 -740 0 0 {name=l3 lab=GND}
@@ -212,11 +211,13 @@ C {devices/lab_pin.sym} 1110 -750 1 0 {name=l3 sig_type=std_logic lab=vcntrl
 }
 C {devices/capa.sym} 1030 -900 0 0 {name=C1
 m=1
-value=100f
+value=2p
 footprint=1206
 device="ceramic capacitor"}
 C {devices/capa.sym} 1190 -900 0 0 {name=C2
 m=1
-value=100f
+value=2p
 footprint=1206
 device="ceramic capacitor"}
+C {devices/isource.sym} 710 -650 0 0 {name=I1 value="pwl(0 0 1n 1n 1.1n 1n 1.2n 0)"}
+C {devices/gnd.sym} 710 -620 0 0 {name=l3 lab=GND}

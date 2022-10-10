@@ -5,56 +5,46 @@ K {}
 V {}
 S {}
 E {}
-N 360 -130 360 -90 {
+N 560 -180 760 -180 {
 lab=positive}
-N 270 -60 340 -60 {
-lab=center_tap}
-N 130 -20 130 -10 {
-lab=#net1}
-N 130 -130 130 -80 {
-lab=positive}
-N 130 -130 360 -130 {
-lab=positive}
-N 270 20 360 20 {
+N 820 -180 1020 -180 {
+lab=negative}
+N 790 -160 790 -70 {
 lab=GND}
-N 270 -60 270 20 {
-lab=center_tap}
-N 500 0 500 10 {
-lab=#net1}
-N 420 -60 500 -60 {
+N 690 -180 690 -160 {
+lab=positive}
+N 920 -180 920 -160 {
 lab=negative}
-N 420 -60 420 -0 {
+N 690 -100 690 -80 {
+lab=GND}
+N 690 -80 790 -80 {
+lab=GND}
+N 790 -80 920 -80 {
+lab=GND}
+N 920 -100 920 -80 {
+lab=GND}
+N 550 -180 550 -100 {
+lab=positive}
+N 550 -180 560 -180 {
+lab=positive}
+N 550 -40 550 60 {
 lab=negative}
-N 360 -0 420 0 {
+N 1020 -180 1020 -30 {
 lab=negative}
-N 360 -30 360 -0 {
+N 1020 -30 1020 30 {
 lab=negative}
-N 270 -70 270 -60 {
-lab=center_tap}
-N 270 -20 300 -20 {
-lab=center_tap}
-N 500 10 500 70 {
-lab=#net1}
-N 130 70 500 70 {
-lab=#net1}
-N 130 -20 130 70 {
-lab=#net1}
-C {devices/lab_pin.sym} 360 -120 0 0 {name=l2 sig_type=std_logic lab=positive
+N 550 60 1020 60 {
+lab=negative}
+N 1020 30 1020 60 {
+lab=negative}
+C {devices/lab_pin.sym} 740 -180 1 0 {name=l2 sig_type=std_logic lab=positive
 }
-C {devices/lab_pin.sym} 290 -60 3 0 {name=l2 sig_type=std_logic lab=center_tap
-}
-C {devices/lab_pin.sym} 360 0 2 0 {name=l2 sig_type=std_logic lab=negative
-}
-C {devices/isource.sym} 130 -50 2 0 {name=Iin value="0 ac 1"}
-C {devices/gnd.sym} 360 20 0 0 {name=l2 lab=GND}
 C {devices/code_shown.sym} -310 -330 0 0 {name=s1 only_toplevel=false value="
 .lib /usr/local/share/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice tt
 .include /usr/local/share/pdk/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__ind_05_220.model.spice
-*.lib ~/tools/open_pdks/sky130/sky130A/libs.tech/ngspice/sky130.lib.spice tt
-*.include /home/vakumar/tools/open_pdks/sky130/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__ind_05_220.model.spice
-.ac dec 100 1meg 10G
+
 .control
-run
+ac lin 1000000 1G 2G
 plot 20*log(V(positive))
 
 let Z=mag(v(positive))
@@ -74,19 +64,22 @@ let Q=Fc/(Fh-Fl)
 print Q
 .endc
 "}
-C {../symbols/ind_05.sym} 360 -60 0 0 {name=L1
+C {../symbols/ind_05.sym} 790 -180 3 0 {name=L2
 body=GND
 model=ind_05_220
 spiceprefix=X
 }
-C {devices/isource.sym} 500 -30 0 0 {name=Iin1 value="0 ac 1"}
-C {devices/capa.sym} 270 -100 0 0 {name=C1
+C {devices/capa.sym} 690 -130 0 0 {name=C3
 m=1
-value=1.2767p
+value=2p
 footprint=1206
 device="ceramic capacitor"}
-C {devices/capa.sym} 330 -20 1 0 {name=C2
+C {devices/capa.sym} 920 -130 0 0 {name=C4
 m=1
-value=1.2767p
+value=2p
 footprint=1206
 device="ceramic capacitor"}
+C {devices/gnd.sym} 790 -70 0 0 {name=l3 lab=GND}
+C {devices/isource.sym} 550 -70 2 0 {name=I1 value="0 ac 1"}
+C {devices/lab_pin.sym} 860 -180 1 0 {name=l3 sig_type=std_logic lab=negative
+}
