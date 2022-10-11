@@ -6,13 +6,13 @@ V {}
 S {}
 E {}
 N 500 20 520 20 {
-lab=GND}
+lab=vs}
 N 520 20 520 50 {
-lab=GND}
+lab=vs}
 N 500 50 520 50 {
-lab=GND}
+lab=vs}
 N 500 50 500 90 {
-lab=GND}
+lab=vs}
 N 500 -60 500 -10 {
 lab=#net1}
 N 500 150 500 160 {
@@ -33,13 +33,9 @@ N 560 -110 620 -110 {
 lab=#net1}
 N 620 20 620 70 {
 lab=GND}
-N 500 70 620 70 {
-lab=GND}
-N 500 90 500 150 {
-lab=GND}
 C {sky130_fd_pr/nfet_01v8.sym} 480 20 0 0 {name=M1
 L=1
-W=100
+W=10
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -52,7 +48,7 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {devices/gnd.sym} 500 160 0 0 {name=l1 lab=GND}
-C {devices/vsource.sym} 620 -10 0 0 {name=vds value=0.1}
+C {devices/vsource.sym} 620 -10 0 0 {name=vds value=1.8}
 C {devices/vsource.sym} 410 60 0 0 {name=V3 value=1.8}
 C {devices/gnd.sym} 410 100 0 0 {name=l1 lab=GND}
 C {devices/code.sym} 770 -110 0 0 {name=LIBS only_toplevel=false value=
@@ -67,10 +63,10 @@ C {devices/code_shown.sym} 950 -170 0 0 {name=SPICE only_toplevel=false
 value=
 "
 .control
-dc vds 0 1.5 0.001
-save all
-plot -i(vds)
-let x = deriv(-i(vds))
-print x[1500]/i(vds)[1500]
+op
+show all
 .endc
 "}
+C {devices/gnd.sym} 620 70 0 0 {name=l1 lab=GND}
+C {devices/isource.sym} 500 120 0 0 {name=I0 value=1m}
+C {devices/lab_pin.sym} 500 70 0 0 {name=l1 sig_type=std_logic lab=vs}
