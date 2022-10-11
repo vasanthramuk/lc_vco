@@ -39,7 +39,7 @@ N 500 90 500 150 {
 lab=GND}
 C {sky130_fd_pr/nfet_01v8.sym} 480 20 0 0 {name=M1
 L=0.15
-W=2
+W=3
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -70,6 +70,7 @@ value=
 dc vds 0 2 0.001
 save all
 plot -i(vds)
-plot deriv(-i(vds))
+let x = deriv(-i(vds))
+print x[2000]
 .endc
 "}
