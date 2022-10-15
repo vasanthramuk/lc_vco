@@ -1,4 +1,4 @@
-v {xschem version=3.1.0 file_version=1.2
+v {xschem version=3.1.0 file_version=1.2 
 }
 G {}
 K {}
@@ -104,22 +104,11 @@ C {devices/code.sym} 1410 -810 0 0 {name=LIBS only_toplevel=false value=
 C {devices/isource.sym} 1110 -480 0 0 {name=I0 value=2m}
 C {devices/vdd.sym} 1110 -990 0 0 {name=l1 lab=VDD}
 C {devices/gnd.sym} 1110 -420 0 0 {name=l1 lab=GND}
-C {devices/code_shown.sym} 1420 -640 0 0 {name=SPICE only_toplevel=false 
-value=
-"
-.control
-tran 1p 500n 490n
-let y = v(vout_m)-v(vout_p)
-linearize y
-fft y
-plot y
-.endc
-"}
 C {devices/lab_pin.sym} 1270 -690 1 0 {name=l3 sig_type=std_logic lab=vout_p}
 C {devices/lab_pin.sym} 970 -690 1 0 {name=l3 sig_type=std_logic lab=vout_m}
 C {devices/lab_pin.sym} 1140 -550 3 0 {name=l3 sig_type=std_logic lab=vp}
 C {devices/vsource.sym} 650 -790 0 0 {name=V2 value="pwl(0 0 1n 1.8)"}
-C {devices/vsource.sym} 1650 -820 0 0 {name=V3 value=0}
+C {devices/vsource.sym} 1650 -820 0 0 {name=V3 value=1.8}
 C {devices/gnd.sym} 1650 -770 0 0 {name=l3 lab=GND}
 C {devices/lab_pin.sym} 1650 -860 0 0 {name=l3 sig_type=std_logic lab=vcntrl
 
@@ -170,3 +159,29 @@ body=GND
 model=ind_05_220
 spiceprefix=X
 }
+C {devices/code_shown.sym} 1380 -630 0 0 {name=SPICE1 only_toplevel=false 
+value=
+"
+.control
+let ctrl=1.8
+while ctrl ge 0
+	tran 0.01p 10n
+	let diff=(v(vout_p)-v(vout_m))
+	*plot v(vout_p)
+	plot diff
+	
+	let vcap = 1.8-ctrl
+	echo ctrl is $&ctrl. vcap is $&vcap
+	meas tran tperiod TRIG diff VAL=0 CROSS=5 TARG diff VAL=0 CROSS=7
+	let freq = 1/tperiod
+	echo frequency is $&freq
+	*meas tran vpp TRIG diff VAL=0 CROSS=7 TARG diff VAL=0 CROSS=11
+	*echo vpp is $&vpp
+
+	let ctrl = ctrl-1.8
+	alter v3 dc = ctrl
+end
+save all
+
+.endc
+"}
