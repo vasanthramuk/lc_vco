@@ -1,4 +1,4 @@
-v {xschem version=3.1.0 file_version=1.2 
+v {xschem version=3.1.0 file_version=1.2
 }
 G {}
 K {}
@@ -165,7 +165,7 @@ value=
 .control
 let ctrl=1.8
 while ctrl ge 0
-	tran 0.01p 10n
+	tran 0.1p 500n 480n
 	let diff=(v(vout_p)-v(vout_m))
 	*plot v(vout_p)
 	plot diff
@@ -177,6 +177,7 @@ while ctrl ge 0
 	echo frequency is $&freq
 	*meas tran vpp TRIG diff VAL=0 CROSS=7 TARG diff VAL=0 CROSS=11
 	*echo vpp is $&vpp
+	plot vp
 
 	let ctrl = ctrl-1.8
 	alter v3 dc = ctrl
