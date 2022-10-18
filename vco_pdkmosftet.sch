@@ -1,4 +1,4 @@
-v {xschem version=3.1.0 file_version=1.2
+v {xschem version=3.1.0 file_version=1.2 
 }
 G {}
 K {}
@@ -29,8 +29,6 @@ N 1190 -580 1190 -550 {
 lab=vp}
 N 1110 -520 1110 -510 {
 lab=vp}
-N 1190 -720 1190 -690 {
-lab=vout_p}
 N 1030 -720 1030 -690 {
 lab=vout_m}
 N 920 -690 1030 -690 {
@@ -51,8 +49,6 @@ N 1190 -950 1190 -930 {
 lab=VDD}
 N 1030 -950 1030 -930 {
 lab=VDD}
-N 1190 -870 1190 -850 {
-lab=vout_p}
 N 1030 -870 1030 -850 {
 lab=vout_m}
 N 1110 -550 1110 -520 {
@@ -63,8 +59,6 @@ N 1650 -790 1650 -770 {
 lab=GND}
 N 1030 -850 1030 -720 {
 lab=vout_m}
-N 1190 -850 1190 -720 {
-lab=vout_p}
 N 1090 -750 1130 -750 {
 lab=vcntrl}
 N 710 -690 860 -690 {
@@ -85,14 +79,16 @@ N 990 -610 990 -550 {
 lab=vp}
 N 990 -550 1030 -550 {
 lab=vp}
-N 1140 -860 1190 -860 {
-lab=vout_p}
 N 1030 -860 1080 -860 {
 lab=vout_m}
 N 1110 -940 1110 -880 {
 lab=VDD}
 N 1110 -950 1110 -940 {
 lab=VDD}
+N 1140 -860 1190 -860 {
+lab=#net1}
+N 1190 -870 1190 -750 {
+lab=#net1}
 C {devices/code.sym} 1410 -810 0 0 {name=LIBS only_toplevel=false value=
 "
 .option wnflag = 1
@@ -126,7 +122,7 @@ C {devices/isource.sym} 710 -650 0 0 {name=I1 value="pwl(0 0 1n 1n 1.1n 1n 1.2n 
 C {devices/gnd.sym} 710 -620 0 0 {name=l3 lab=GND}
 C {sky130_fd_pr/nfet_01v8.sym} 1170 -610 0 0 {name=M1
 L=1
-W=10
+W=31
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -140,7 +136,7 @@ spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} 1050 -610 0 1 {name=M2
 L=1
-W=10
+W=31
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -164,11 +160,11 @@ value=
 "
 .control
 let ctrl=1.8
-while ctrl ge 0
-	tran 0.1p 500n 480n
+while ctrl ge 1.8
+	tran 1p 500n 480n
 	let diff=(v(vout_p)-v(vout_m))
 	*plot v(vout_p)
-	plot diff
+	*plot diff
 	
 	let vcap = 1.8-ctrl
 	echo ctrl is $&ctrl. vcap is $&vcap
@@ -178,6 +174,10 @@ while ctrl ge 0
 	*meas tran vpp TRIG diff VAL=0 CROSS=7 TARG diff VAL=0 CROSS=11
 	*echo vpp is $&vpp
 	plot vp
+	plot (vout_m+vout_p)/2
+	plot vout_m
+	plot vout_p
+	plot i(Vtest)
 
 	let ctrl = ctrl-1.8
 	alter v3 dc = ctrl
@@ -186,3 +186,4 @@ save all
 
 .endc
 "}
+C {devices/vsource.sym} 1190 -720 0 0 {name=Vtest value=0}
