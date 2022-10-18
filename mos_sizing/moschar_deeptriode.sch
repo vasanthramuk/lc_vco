@@ -38,7 +38,7 @@ lab=GND}
 N 500 90 500 150 {
 lab=GND}
 C {sky130_fd_pr/nfet_01v8.sym} 480 20 0 0 {name=M1
-L=1
+L=10
 W=100
 nf=1 
 mult=1
@@ -52,7 +52,7 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {devices/gnd.sym} 500 160 0 0 {name=l1 lab=GND}
-C {devices/vsource.sym} 620 -10 0 0 {name=vds value=0.1}
+C {devices/vsource.sym} 620 -10 0 0 {name=vds value=1.8}
 C {devices/vsource.sym} 410 60 0 0 {name=V3 value=1.8}
 C {devices/gnd.sym} 410 100 0 0 {name=l1 lab=GND}
 C {devices/code.sym} 770 -110 0 0 {name=LIBS only_toplevel=false value=
@@ -67,10 +67,7 @@ C {devices/code_shown.sym} 950 -170 0 0 {name=SPICE only_toplevel=false
 value=
 "
 .control
-dc vds 0 1.5 0.001
-save all
-plot -i(vds)
-let x = deriv(-i(vds))
-print x[1500]/i(vds)[1500]
+op
+show all
 .endc
 "}
