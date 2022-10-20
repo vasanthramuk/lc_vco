@@ -44,7 +44,7 @@ C {devices/code_shown.sym} -310 -330 0 0 {name=s1 only_toplevel=false value="
 .include /usr/local/share/pdk/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__ind_05_220.model.spice
 
 .control
-ac lin 1000000 1G 2G
+ac lin 100 1G 2G
 plot 20*log(V(positive))
 
 let Z=mag(v(positive))
@@ -62,6 +62,9 @@ meas ac FC max_at Z
 let Q=Fc/(Fh-Fl)
 
 print Q
+
+set filetype=ascii
+save all
 .endc
 "}
 C {../symbols/ind_05.sym} 790 -180 3 0 {name=L2

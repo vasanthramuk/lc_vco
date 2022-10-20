@@ -5,32 +5,32 @@ V {}
 S {}
 E {}
 N 500 20 520 20 {
-lab=#net1}
+lab=vx}
 N 520 20 520 50 {
-lab=#net1}
+lab=vx}
 N 500 50 520 50 {
-lab=#net1}
+lab=vx}
 N 500 50 500 90 {
-lab=#net1}
+lab=vx}
 N 500 -60 500 -10 {
-lab=#net2}
+lab=#net1}
 N 500 150 500 160 {
 lab=GND}
 N 560 -50 560 -40 {
 lab=GND}
 N 500 -110 500 -60 {
-lab=#net2}
+lab=#net1}
 N 500 -110 560 -110 {
-lab=#net2}
+lab=#net1}
 N 410 20 460 20 {
-lab=#net3}
+lab=#net2}
 N 410 20 410 30 {
-lab=#net3}
+lab=#net2}
 N 410 90 410 100 {
 lab=GND}
 C {sky130_fd_pr/nfet_01v8.sym} 480 20 0 0 {name=M1
 L=0.15
-W=1
+W=100
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -60,6 +60,9 @@ C {devices/code_shown.sym} 950 -170 0 0 {name=SPICE1 only_toplevel=false
 value=
 "
 .control
-	
+op
+show all
+print vx
 .endc
 "}
+C {devices/lab_pin.sym} 500 70 0 0 {name=l1 sig_type=std_logic lab=vx}
