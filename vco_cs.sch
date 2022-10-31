@@ -1,4 +1,5 @@
-v {xschem version=3.1.0 file_version=1.2 }
+v {xschem version=3.1.0 file_version=1.2
+}
 G {}
 K {}
 V {}
@@ -153,7 +154,7 @@ C {devices/isource.sym} -1470 -610 0 0 {name=I1 value="pwl(0 0 1n 1n 1.1n 1n 1.2
 C {devices/gnd.sym} -1470 -580 0 0 {name=l13 lab=GND}
 C {sky130_fd_pr/nfet_01v8.sym} -1010 -570 0 0 {name=M1
 L=1
-W=10
+W=16
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -167,7 +168,7 @@ spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} -1130 -570 0 1 {name=M2
 L=1
-W=10
+W=16
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -189,7 +190,7 @@ spiceprefix=X
 C {devices/vsource.sym} -990 -680 0 0 {name=Vtest value=0}
 C {sky130_fd_pr/nfet_01v8.sym} -1090 -320 0 0 {name=M3
 L=1
-W=26
+W=27
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -203,7 +204,7 @@ spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} -1210 -320 0 1 {name=M4
 L=1
-W=13
+W=10.8
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -217,7 +218,7 @@ spiceprefix=X
 }
 C {devices/gnd.sym} -1230 -270 0 0 {name=l1 lab=GND}
 C {devices/gnd.sym} -1070 -270 0 0 {name=l2 lab=GND}
-C {devices/isource.sym} -1230 -470 0 0 {name=I2 value=1m}
+C {devices/isource.sym} -1230 -470 0 0 {name=I2 value=0.4m}
 C {devices/lab_pin.sym} -1230 -530 0 0 {name=l8 sig_type=std_logic lab=VDD}
 C {devices/code_shown.sym} -860 -590 0 0 {name=SPICE2 only_toplevel=false 
 value=
@@ -228,7 +229,7 @@ while ctrl ge 1.8
 	tran 1p 1000n 700n
 	let diff=(v(vout_p)-v(vout_m))
 	*plot v(vout_p)
-	*plot diff
+	plot diff
 	
 	let vcap = 1.8-ctrl
 	echo ctrl is $&ctrl. vcap is $&vcap

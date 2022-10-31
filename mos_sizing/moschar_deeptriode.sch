@@ -53,7 +53,7 @@ spiceprefix=X
 }
 C {devices/gnd.sym} 500 160 0 0 {name=l1 lab=GND}
 C {devices/vsource.sym} 620 -10 0 0 {name=vds value=1.8}
-C {devices/vsource.sym} 410 60 0 0 {name=V3 value=1.8}
+C {devices/vsource.sym} 410 60 0 0 {name=V3 value=1}
 C {devices/gnd.sym} 410 100 0 0 {name=l1 lab=GND}
 C {devices/code.sym} 770 -110 0 0 {name=LIBS only_toplevel=false value=
 "
