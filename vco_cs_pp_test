@@ -1,0 +1,252 @@
+v {xschem version=3.1.0 file_version=1.2 }
+G {}
+K {}
+V {}
+S {}
+E {}
+N -50 290 -30 290 {
+lab=vout_p}
+N -30 290 40 210 {
+lab=vout_p}
+N 40 210 70 210 {
+lab=vout_p}
+N 70 210 70 260 {
+lab=vout_p}
+N 10 290 30 290 {
+lab=vout_m}
+N -70 210 10 290 {
+lab=vout_m}
+N -90 210 -70 210 {
+lab=vout_m}
+N -90 210 -90 260 {
+lab=vout_m}
+N -90 320 -90 350 {
+lab=vp}
+N -90 350 70 350 {
+lab=vp}
+N 70 320 70 350 {
+lab=vp}
+N -90 180 -90 210 {
+lab=vout_m}
+N -200 210 -90 210 {
+lab=vout_m}
+N 70 210 180 210 {
+lab=vout_p}
+N -90 -50 70 -50 {
+lab=VDD}
+N -10 -90 -10 -50 {
+lab=VDD}
+N -470 140 -470 160 {
+lab=GND}
+N -470 60 -470 80 {
+lab=VDD}
+N 70 -50 70 -30 {
+lab=VDD}
+N -90 -50 -90 -30 {
+lab=VDD}
+N -90 30 -90 50 {
+lab=vout_m}
+N 530 30 530 50 {
+lab=vcntrl}
+N 530 110 530 130 {
+lab=GND}
+N -90 50 -90 180 {
+lab=vout_m}
+N -30 150 10 150 {
+lab=vcntrl}
+N -410 210 -260 210 {
+lab=vout_m}
+N -410 210 -410 220 {
+lab=vout_m}
+N -260 210 -200 210 {
+lab=vout_m}
+N 70 290 100 290 {
+lab=vp}
+N 100 290 100 350 {
+lab=vp}
+N 70 350 100 350 {
+lab=vp}
+N -130 290 -90 290 {
+lab=vp}
+N -130 290 -130 350 {
+lab=vp}
+N -130 350 -90 350 {
+lab=vp}
+N -90 40 -40 40 {
+lab=vout_m}
+N -10 -40 -10 20 {
+lab=VDD}
+N -10 -50 -10 -40 {
+lab=VDD}
+N 20 40 70 40 {
+lab=#net1}
+N 70 30 70 150 {
+lab=#net1}
+N -200 540 -170 540 {
+lab=GND}
+N -200 540 -200 590 {
+lab=GND}
+N -200 590 -170 590 {
+lab=GND}
+N -170 570 -170 590 {
+lab=GND}
+N -110 540 -90 540 {
+lab=#net2}
+N -90 480 -90 540 {
+lab=#net2}
+N -170 480 -110 480 {
+lab=#net2}
+N -170 480 -170 510 {
+lab=#net2}
+N -90 540 -50 540 {
+lab=#net2}
+N -10 570 -10 590 {
+lab=GND}
+N -10 460 -10 510 {
+lab=vp}
+N -10 540 20 540 {
+lab=GND}
+N 20 540 20 580 {
+lab=GND}
+N -10 590 20 590 {
+lab=GND}
+N 20 580 20 590 {
+lab=GND}
+N -130 540 -110 540 {
+lab=#net2}
+N -110 480 -90 480 {
+lab=#net2}
+N -170 420 -170 480 {
+lab=#net2}
+N -170 320 -170 360 {
+lab=VDD}
+N -10 350 -10 460 {
+lab=vp}
+C {devices/code.sym} 290 90 0 0 {name=LIBS only_toplevel=false value=
+"
+.option wnflag = 1
+.lib /usr/local/share/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+.include /usr/local/share/pdk/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__ind_05_220.model.spice
+.param mc_mm_switch=0
+"
+}
+C {devices/vdd.sym} -10 -90 0 0 {name=l1 lab=VDD}
+C {devices/lab_pin.sym} 150 210 1 0 {name=l3 sig_type=std_logic lab=vout_p}
+C {devices/lab_pin.sym} -150 210 1 0 {name=l4 sig_type=std_logic lab=vout_m}
+C {devices/lab_pin.sym} 20 350 3 0 {name=l5 sig_type=std_logic lab=vp}
+C {devices/vsource.sym} -470 110 0 0 {name=V2 value="pwl(0 0 1n 1.8)"}
+C {devices/vsource.sym} 530 80 0 0 {name=V3 value=1.8}
+C {devices/gnd.sym} 530 130 0 0 {name=l6 lab=GND}
+C {devices/lab_pin.sym} 530 40 0 0 {name=l7 sig_type=std_logic lab=vcntrl
+
+}
+C {devices/vdd.sym} -470 60 0 0 {name=l8 lab=VDD}
+C {sky130_fd_pr/cap_var_lvt.sym} -60 150 3 0 {name=C5 model=cap_var_lvt W=10 L=0.5 VM=1 spiceprefix=X}
+C {sky130_fd_pr/cap_var_lvt.sym} 40 150 1 1 {name=C6 model=cap_var_lvt W=10 L=0.5 VM=1 spiceprefix=X}
+C {devices/gnd.sym} -40 190 0 0 {name=l9 lab=GND}
+C {devices/gnd.sym} 20 190 0 0 {name=l10 lab=GND}
+C {devices/gnd.sym} -470 160 0 0 {name=l11 lab=GND}
+C {devices/lab_pin.sym} -10 150 1 0 {name=l12 sig_type=std_logic lab=vcntrl
+
+}
+C {devices/isource.sym} -410 250 0 0 {name=I1 value="pwl(0 0 1n 1n 1.1n 1n 1.2n 0)"}
+C {devices/gnd.sym} -410 280 0 0 {name=l13 lab=GND}
+C {sky130_fd_pr/nfet_01v8.sym} 50 290 0 0 {name=M1
+L=1
+W=20
+nf=1 
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
+C {sky130_fd_pr/nfet_01v8.sym} -70 290 0 1 {name=M2
+L=1
+W=20
+nf=1 
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
+C {sky130_fd_pr/cap_mim_m3_1.sym} -90 0 0 0 {name=C1 model=cap_mim_m3_1 W=32 L=32 MF=1 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 70 0 0 0 {name=C2 model=cap_mim_m3_1 W=32 L=32 MF=1 spiceprefix=X}
+C {symbols/ind_05.sym} -10 40 1 0 {name=L14
+body=GND
+model=ind_05_220
+spiceprefix=X
+}
+C {devices/vsource.sym} 70 180 0 0 {name=Vtest value=0}
+C {sky130_fd_pr/nfet_01v8.sym} -30 540 0 0 {name=M3
+L=1
+W=13
+nf=1 
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
+C {sky130_fd_pr/nfet_01v8.sym} -150 540 0 1 {name=M4
+L=1
+W=13
+nf=1 
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
+C {devices/gnd.sym} -170 590 0 0 {name=l2 lab=GND}
+C {devices/gnd.sym} -10 590 0 0 {name=l15 lab=GND}
+C {devices/isource.sym} -170 390 0 0 {name=I2 value=1m}
+C {devices/lab_pin.sym} -170 330 0 0 {name=l16 sig_type=std_logic lab=VDD}
+C {devices/code_shown.sym} 200 270 0 0 {name=SPICE2 only_toplevel=false 
+value=
+"
+.control
+let ctrl=1.8
+while ctrl ge 1.8
+	tran 1p 500n 400n
+	let diff=(v(vout_p)-v(vout_m))
+	*plot v(vout_p)
+	*plot diff
+	
+	let vcap = 1.8-ctrl
+	echo ctrl is $&ctrl. vcap is $&vcap
+	meas tran tperiod TRIG diff VAL=0 CROSS=5 TARG diff VAL=0 CROSS=7
+	let freq = 1/tperiod
+	echo frequency is $&freq
+	*meas tran vpp TRIG diff VAL=0 CROSS=7 TARG diff VAL=0 CROSS=11
+	*echo vpp is $&vpp
+	plot vp
+	plot (vout_m+vout_p)/2
+	plot vout_m
+	plot vout_p
+	plot i(Vtest)
+
+	let ctrl = ctrl-1.8
+	alter v3 dc = ctrl
+end
+save all
+
+.endc
+"}

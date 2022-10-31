@@ -225,19 +225,19 @@ value=
 .control
 
 let ctrl=0.8
-let step=0.2
-let size=(1/step) +1
+let step=0.01
+let size=(1/step)
 let i=0
 let f=vector(size)
 let ct=vector(size)
 while ctrl le 1.8
 	alter v3 dc = ctrl
-	tran 1p 100n 
+	tran 1p 50n 
 	let diff=(v(vout_p)-v(vout_m))
 	
 	
 
-	meas tran tperiod TRIG diff VAL=0 CROSS=100 TARG diff VAL=0 CROSS=102
+	meas tran tperiod TRIG diff VAL=0 CROSS=8 TARG diff VAL=0 CROSS=10
 	let freq = 1/tperiod
 	echo frequency is $&freq and vctrl is $&ctrl
 	let f[i]=freq
