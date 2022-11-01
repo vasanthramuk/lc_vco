@@ -153,7 +153,7 @@ C {devices/isource.sym} 8600 5070 0 0 {name=I1 value="pwl(0 0 1n 1n 1.1n 1n 1.2n
 C {devices/gnd.sym} 8600 5100 0 0 {name=l13 lab=GND}
 C {sky130_fd_pr/nfet_01v8.sym} 9060 5110 0 0 {name=M1
 L=1
-W=10
+W=16
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -167,7 +167,7 @@ spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} 8940 5110 0 1 {name=M2
 L=1
-W=10
+W=16
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -189,7 +189,7 @@ spiceprefix=X
 C {devices/vsource.sym} 9080 5000 0 0 {name=Vtest value=0}
 C {sky130_fd_pr/nfet_01v8.sym} 8980 5360 0 0 {name=M3
 L=1
-W=26
+W=27
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -203,7 +203,7 @@ spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} 8860 5360 0 1 {name=M4
 L=1
-W=13
+W=10.8
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -217,7 +217,7 @@ spiceprefix=X
 }
 C {devices/gnd.sym} 8840 5410 0 0 {name=l2 lab=GND}
 C {devices/gnd.sym} 9000 5410 0 0 {name=l14 lab=GND}
-C {devices/isource.sym} 8840 5210 0 0 {name=I2 value=1m}
+C {devices/isource.sym} 8840 5210 0 0 {name=I2 value=0.4m}
 C {devices/lab_pin.sym} 8840 5150 0 0 {name=l15 sig_type=std_logic lab=VDD}
 C {devices/code_shown.sym} 9200 5100 0 0 {name=SPICE2 only_toplevel=false 
 value=
@@ -225,7 +225,7 @@ value=
 .control
 
 let ctrl=0.8
-let step=0.01
+let step=0.1
 let size=(1/step)
 let i=0
 let f=vector(size)
@@ -247,7 +247,11 @@ while ctrl le 1.8
 	
 end
 plot f vs ct
+plot deriv(ct)
+plot deriv(f)
+plot deriv(f) vs deriv(ct)
 save all
 
+write /home/harishakai/Documents/lc_vco/mat.raw all
 .endc
 "}
