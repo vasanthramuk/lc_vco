@@ -1,4 +1,4 @@
-v {xschem version=3.1.0 file_version=1.2 
+v {xschem version=3.1.0 file_version=1.2
 }
 G {}
 K {}
@@ -108,11 +108,6 @@ value=
 save all
 .endc
 "}
-C {/home/vakumar/projects/lc_vco/symbols/ind_05.sym} 520 -20 3 0 {name=L2
-body=GND
-model=ind_05_220
-spiceprefix=X
-}
 C {devices/capa.sym} 430 10 0 0 {name=C3
 m=1
 value=2p
@@ -133,3 +128,8 @@ C {devices/vsource.sym} 730 50 2 0 {name=V3 value=1.8}
 C {devices/gnd.sym} 520 70 0 0 {name=l3 lab=GND}
 C {devices/isource.sym} 190 150 2 0 {name=I1 value="dc 0 ac 1"}
 C {devices/lab_pin.sym} 300 -20 1 0 {name=l4 sig_type=std_logic lab=vpos}
+C {/home/luminatrix/Documents/designs/lc_vco/symbols/ind_05.sym} 520 -20 3 0 {name=L1
+body=GND
+model=ind_05_220
+spiceprefix=X
+}
