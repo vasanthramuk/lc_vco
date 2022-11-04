@@ -5,63 +5,63 @@ K {}
 V {}
 S {}
 E {}
-N 370 80 370 120 {
+N 350 260 350 300 {
 lab=#net1}
-N 370 180 370 190 {
+N 350 360 350 370 {
 lab=GND}
-N 370 190 370 220 {
+N 350 370 350 400 {
 lab=GND}
-N 320 220 370 220 {
+N 300 400 350 400 {
 lab=GND}
-N 320 170 320 220 {
+N 300 350 300 400 {
 lab=GND}
-N 320 170 330 170 {
+N 300 350 310 350 {
 lab=GND}
-N 730 80 730 120 {
+N 710 260 710 300 {
 lab=#net2}
-N 730 180 730 190 {
+N 710 360 710 370 {
 lab=GND}
-N 730 190 730 220 {
+N 710 370 710 400 {
 lab=GND}
-N 680 220 730 220 {
+N 660 400 710 400 {
 lab=GND}
-N 680 170 680 220 {
+N 660 350 660 400 {
 lab=GND}
-N 680 170 690 170 {
+N 660 350 670 350 {
 lab=GND}
-N 520 0 520 70 {
+N 500 180 500 250 {
 lab=GND}
-N 430 -20 490 -20 {
+N 410 160 470 160 {
 lab=vpos}
-N 370 -20 430 -20 {
+N 350 160 410 160 {
 lab=vpos}
-N 550 -20 630 -20 {
+N 530 160 610 160 {
 lab=vneg}
-N 430 40 430 60 {
+N 410 220 410 240 {
 lab=GND}
-N 430 60 520 60 {
+N 410 240 500 240 {
 lab=GND}
-N 630 40 630 60 {
+N 610 220 610 240 {
 lab=GND}
-N 520 60 630 60 {
+N 500 240 610 240 {
 lab=GND}
-N 630 -20 730 -20 {
+N 610 160 710 160 {
 lab=vneg}
-N 190 -20 190 120 {
+N 170 160 170 300 {
 lab=vpos}
-N 190 180 190 310 {
+N 170 360 170 490 {
 lab=vneg}
-N 190 310 890 310 {
+N 170 490 870 490 {
 lab=vneg}
-N 890 -20 890 310 {
+N 870 160 870 490 {
 lab=vneg}
-N 730 -20 890 -20 {
+N 710 160 870 160 {
 lab=vneg}
-N 730 -20 730 20 {
+N 710 160 710 200 {
 lab=vneg}
-N 190 -20 370 -20 {
+N 170 160 350 160 {
 lab=vpos}
-N 370 -20 370 20 {
+N 350 160 350 200 {
 lab=vpos}
 C {devices/code.sym} 570 -270 0 0 {name=LIBS only_toplevel=false value=
 "
@@ -109,20 +109,20 @@ value=
 save all
 .endc
 "}
-C {devices/gnd.sym} 370 220 0 0 {name=l3 lab=GND}
-C {sky130_fd_pr/cap_var_lvt.sym} 370 150 0 0 {name=C5 model=cap_var_lvt W=10 L=0.5 VM=1 spiceprefix=X}
-C {devices/vsource.sym} 370 50 2 0 {name=V1 value=1.8}
-C {devices/gnd.sym} 730 220 0 0 {name=l3 lab=GND}
-C {devices/lab_pin.sym} 800 -20 1 0 {name=l4 sig_type=std_logic lab=vneg}
-C {sky130_fd_pr/cap_var_lvt.sym} 730 150 0 0 {name=C6 model=cap_var_lvt W=10 L=0.5 VM=1 spiceprefix=X}
-C {devices/vsource.sym} 730 50 2 0 {name=V3 value=1.8}
-C {devices/gnd.sym} 520 70 0 0 {name=l3 lab=GND}
-C {devices/isource.sym} 190 150 2 0 {name=I1 value="dc 0 ac 1"}
-C {devices/lab_pin.sym} 300 -20 1 0 {name=l4 sig_type=std_logic lab=vpos}
-C {/home/luminatrix/Documents/designs/lc_vco/symbols/ind_05.sym} 520 -20 3 0 {name=L1
+C {devices/gnd.sym} 350 400 0 0 {name=l3 lab=GND}
+C {sky130_fd_pr/cap_var_lvt.sym} 350 330 0 0 {name=C5 model=cap_var_lvt W=10 L=0.5 VM=1 spiceprefix=X}
+C {devices/vsource.sym} 350 230 2 0 {name=V1 value=1.8}
+C {devices/gnd.sym} 710 400 0 0 {name=l3 lab=GND}
+C {devices/lab_pin.sym} 780 160 1 0 {name=l4 sig_type=std_logic lab=vneg}
+C {sky130_fd_pr/cap_var_lvt.sym} 710 330 0 0 {name=C6 model=cap_var_lvt W=10 L=0.5 VM=1 spiceprefix=X}
+C {devices/vsource.sym} 710 230 2 0 {name=V3 value=1.8}
+C {devices/gnd.sym} 500 250 0 0 {name=l3 lab=GND}
+C {devices/isource.sym} 170 330 2 0 {name=I1 value="dc 0 ac 1"}
+C {devices/lab_pin.sym} 280 160 1 0 {name=l4 sig_type=std_logic lab=vpos}
+C {/home/luminatrix/Documents/designs/lc_vco/symbols/ind_05.sym} 500 160 3 0 {name=L1
 body=GND
 model=ind_05_220
 spiceprefix=X
 }
-C {sky130_fd_pr/cap_mim_m3_1.sym} 430 10 0 0 {name=C1 model=cap_mim_m3_1 W=32 L=32 MF=1 spiceprefix=X}
-C {sky130_fd_pr/cap_mim_m3_1.sym} 630 10 0 0 {name=C2 model=cap_mim_m3_1 W=32 L=32 MF=1 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 410 190 0 0 {name=C1 model=cap_mim_m3_1 W=32 L=32 MF=1 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 610 190 0 0 {name=C2 model=cap_mim_m3_1 W=32 L=32 MF=1 spiceprefix=X}

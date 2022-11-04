@@ -1,4 +1,5 @@
-v {xschem version=3.1.0 file_version=1.2 }
+v {xschem version=3.1.0 file_version=1.2
+}
 G {}
 K {}
 V {}
@@ -36,9 +37,9 @@ N 8920 4770 9080 4770 {
 lab=VDD}
 N 9000 4730 9000 4770 {
 lab=VDD}
-N 8540 4960 8540 4980 {
+N 8600 4960 8600 4980 {
 lab=GND}
-N 8540 4880 8540 4900 {
+N 8600 4880 8600 4900 {
 lab=VDD}
 N 9080 4770 9080 4790 {
 lab=VDD}
@@ -134,18 +135,18 @@ C {devices/vdd.sym} 9000 4730 0 0 {name=l1 lab=VDD}
 C {devices/lab_pin.sym} 9160 5030 1 0 {name=l3 sig_type=std_logic lab=vout_p}
 C {devices/lab_pin.sym} 8860 5030 1 0 {name=l4 sig_type=std_logic lab=vout_m}
 C {devices/lab_pin.sym} 9030 5170 3 0 {name=l5 sig_type=std_logic lab=vp}
-C {devices/vsource.sym} 8540 4930 0 0 {name=V2 value="pwl(0 0 1n 1.8)"}
+C {devices/vsource.sym} 8600 4930 0 0 {name=V2 value="pwl(0 0 1n 1.8)"}
 C {devices/vsource.sym} 9540 4900 0 0 {name=V3 value=1.8}
 C {devices/gnd.sym} 9540 4950 0 0 {name=l6 lab=GND}
 C {devices/lab_pin.sym} 9540 4860 0 0 {name=l7 sig_type=std_logic lab=vcntrl
 
 }
-C {devices/vdd.sym} 8540 4880 0 0 {name=l8 lab=VDD}
+C {devices/vdd.sym} 8600 4880 0 0 {name=l8 lab=VDD}
 C {sky130_fd_pr/cap_var_lvt.sym} 8950 4970 3 0 {name=C5 model=cap_var_lvt W=10 L=0.5 VM=1 spiceprefix=X}
 C {sky130_fd_pr/cap_var_lvt.sym} 9050 4970 1 1 {name=C6 model=cap_var_lvt W=10 L=0.5 VM=1 spiceprefix=X}
 C {devices/gnd.sym} 8970 5010 0 0 {name=l9 lab=GND}
 C {devices/gnd.sym} 9030 5010 0 0 {name=l10 lab=GND}
-C {devices/gnd.sym} 8540 4980 0 0 {name=l11 lab=GND}
+C {devices/gnd.sym} 8600 4980 0 0 {name=l11 lab=GND}
 C {devices/lab_pin.sym} 9000 4970 1 0 {name=l12 sig_type=std_logic lab=vcntrl
 
 }
@@ -219,7 +220,7 @@ C {devices/gnd.sym} 8840 5410 0 0 {name=l2 lab=GND}
 C {devices/gnd.sym} 9000 5410 0 0 {name=l14 lab=GND}
 C {devices/isource.sym} 8840 5210 0 0 {name=I2 value=0.4m}
 C {devices/lab_pin.sym} 8840 5150 0 0 {name=l15 sig_type=std_logic lab=VDD}
-C {devices/code_shown.sym} 9200 5100 0 0 {name=SPICE2 only_toplevel=false 
+C {devices/code_shown.sym} 9300 5090 0 0 {name=SPICE2 only_toplevel=false 
 value=
 "
 .control

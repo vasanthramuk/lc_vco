@@ -41,9 +41,9 @@ N 1030 -950 1190 -950 {
 lab=Vdd}
 N 1110 -990 1110 -950 {
 lab=VDD}
-N 650 -760 650 -740 {
+N 780 -790 780 -770 {
 lab=gnd}
-N 650 -840 650 -820 {
+N 780 -870 780 -850 {
 lab=vdd}
 N 1110 -450 1110 -420 {
 lab=gnd}
@@ -140,13 +140,13 @@ C {devices/code.sym} 1410 -810 0 0 {name=LIBS only_toplevel=false value=
 "
 }
 C {devices/lab_pin.sym} 1110 -980 0 0 {name=l1 sig_type=std_logic lab=Vdd}
-C {devices/isource.sym} 1110 -480 0 0 {name=I0 value=5m}
-C {devices/vsource.sym} 650 -790 0 0 {name=V1 value=1.8}
-C {devices/lab_pin.sym} 650 -830 0 0 {name=l1 sig_type=std_logic lab=vdd
+C {devices/isource.sym} 1110 -480 0 0 {name=I0 value=1m}
+C {devices/vsource.sym} 780 -820 0 0 {name=V1 value=1.8}
+C {devices/lab_pin.sym} 780 -860 0 0 {name=l1 sig_type=std_logic lab=vdd
 }
 C {devices/vdd.sym} 1110 -990 0 0 {name=l1 lab=VDD}
-C {devices/gnd.sym} 650 -740 0 0 {name=l1 lab=GND}
-C {devices/lab_pin.sym} 650 -750 0 0 {name=l1 sig_type=std_logic lab=gnd}
+C {devices/gnd.sym} 780 -770 0 0 {name=l1 lab=GND}
+C {devices/lab_pin.sym} 780 -780 0 0 {name=l1 sig_type=std_logic lab=gnd}
 C {devices/capa.sym} 1030 -900 0 0 {name=C1
 m=1
 value=0.8p
@@ -186,23 +186,23 @@ C {devices/vccs.sym} 1030 -610 0 1 {name=G1 value=1e-2}
 C {devices/vccs.sym} 1190 -610 0 0 {name=G2 value=1e-2}
 C {devices/capa.sym} 870 -660 0 0 {name=C3
 m=1
-value=0.47p
+value=8.78f
 footprint=1206
 device="ceramic capacitor"}
 C {devices/capa.sym} 1340 -660 0 0 {name=C4
 m=1
-value=0.47p
+value=8.78p
 footprint=1206
 device="ceramic capacitor"}
 C {devices/lab_pin.sym} 870 -600 0 0 {name=l3 sig_type=std_logic lab=gnd}
 C {devices/lab_pin.sym} 1340 -600 0 0 {name=l3 sig_type=std_logic lab=gnd}
 C {devices/res.sym} 960 -910 0 0 {name=R3
-value=90
+value=750
 footprint=1206
 device=resistor
 m=1}
 C {devices/res.sym} 1270 -910 0 1 {name=R4
-value=90
+value=750
 footprint=1206
 device=resistor
 m=1}
@@ -210,3 +210,13 @@ C {devices/gnd.sym} 780 -590 0 0 {name=l4 lab=GND}
 C {devices/lab_pin.sym} 780 -600 0 0 {name=l5 sig_type=std_logic lab=gnd}
 C {devices/isource.sym} 780 -640 0 0 {name=I1 value="PULSE( 0 1 0n 1n 1n 1n )"}
 C {devices/lab_pin.sym} 1140 -550 3 0 {name=l3 sig_type=std_logic lab=vp}
+C {devices/res.sym} 980 -600 0 0 {name=R1
+value=10k
+footprint=1206
+device=resistor
+m=1}
+C {devices/res.sym} 1260 -600 0 0 {name=R2
+value=10k
+footprint=1206
+device=resistor
+m=1}
