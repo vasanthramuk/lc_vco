@@ -1,0 +1,26 @@
+timestamp 1670760168
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+use sky130_fd_pr__nfet_01v8_NFC7VK sky130_fd_pr__nfet_01v8_NFC7VK_0 0 1 -1636 -1 0 243
+use sky130_fd_pr__nfet_01v8_F8A7VK sky130_fd_pr__nfet_01v8_F8A7VK_0 0 1 3293 -1 0 243
+node "li_3334_n128#" 717 46.6051 3334 -128 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 224 228 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "sky130_fd_pr__nfet_01v8_F8A7VK_0/gnd" "sky130_fd_pr__nfet_01v8_NFC7VK_0/gatecurref" 2.3177
+cap "sky130_fd_pr__nfet_01v8_NFC7VK_0/a_n100_n1277#" "sky130_fd_pr__nfet_01v8_NFC7VK_0/gatecurref" 10.0904
+cap "sky130_fd_pr__nfet_01v8_NFC7VK_0/curscrref_drain" "sky130_fd_pr__nfet_01v8_NFC7VK_0/gatecurref" 0.475319
+cap "sky130_fd_pr__nfet_01v8_F8A7VK_0/vp" "sky130_fd_pr__nfet_01v8_NFC7VK_0/gatecurref" 2.56492
+cap "sky130_fd_pr__nfet_01v8_NFC7VK_0/curscrref_drain" "sky130_fd_pr__nfet_01v8_F8A7VK_0/vp" 7.24917
+cap "sky130_fd_pr__nfet_01v8_NFC7VK_0/gatecurref" "sky130_fd_pr__nfet_01v8_F8A7VK_0/gnd" 0.475642
+cap "sky130_fd_pr__nfet_01v8_NFC7VK_0/gatecurref" "sky130_fd_pr__nfet_01v8_NFC7VK_0/curscrref_drain" 3.04316
+cap "sky130_fd_pr__nfet_01v8_NFC7VK_0/gatecurref" "sky130_fd_pr__nfet_01v8_F8A7VK_0/vp" 0.467534
+cap "sky130_fd_pr__nfet_01v8_F8A7VK_0/vp" "sky130_fd_pr__nfet_01v8_NFC7VK_0/curscrref_drain" 4.53145
+cap "sky130_fd_pr__nfet_01v8_NFC7VK_0/gatecurref" "sky130_fd_pr__nfet_01v8_NFC7VK_0/a_n100_n1277#" 8.19159
+cap "sky130_fd_pr__nfet_01v8_NFC7VK_0/a_n100_n1277#" "sky130_fd_pr__nfet_01v8_F8A7VK_0/gnd" 0.0600834
+cap "sky130_fd_pr__nfet_01v8_F8A7VK_0/gnd" "sky130_fd_pr__nfet_01v8_F8A7VK_0/vp" 0.0594648
+merge "sky130_fd_pr__nfet_01v8_F8A7VK_0/gnd" "li_3334_n128#" -46.4028 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2 -228 0 0 0 0 0 0 0 0 0 0 0 0
+merge "li_3334_n128#" "sky130_fd_pr__nfet_01v8_NFC7VK_0/gatecurref"
+merge "sky130_fd_pr__nfet_01v8_NFC7VK_0/gatecurref" "VSUBS"
+merge "sky130_fd_pr__nfet_01v8_F8A7VK_0/cursrc1gate" "sky130_fd_pr__nfet_01v8_NFC7VK_0/a_n100_n1277#" -82.7501 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1092 -136 0 0 0 0 0 0 0 0 0 0

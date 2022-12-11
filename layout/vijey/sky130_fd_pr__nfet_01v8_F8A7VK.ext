@@ -1,0 +1,16 @@
+timestamp 1670750879
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+parameters sky130_fd_pr__nfet_01v8 l=l w=w a1=as p1=ps a2=ad p2=pd
+node "vp" 14331 4561.48 -158 -3136 ndif 0 0 0 0 0 0 0 0 313200 11380 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 184960 11220 331520 12750 0 0 0 0 0 0 0 0 0 0
+node "cursrc1gate" 1739 2413.02 -100 -3224 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1289264 13312 0 0 13600 936 28292 1220 0 0 0 0 0 0 0 0 0 0
+substrate "gnd" 0 0 -260 -3310 ppd 0 0 0 0 0 0 0 0 313200 11380 480896 28288 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 703916 41260 0 0 0 0 0 0 0 0 0 0 0 0
+cap "vp" "cursrc1gate" 335.033
+device msubckt sky130_fd_pr__nfet_01v8 -100 -3136 -99 -3135 l=200 w=1080 "gnd" "cursrc1gate" 400 0 "vp" 1080 0 "gnd" 1080 0
+device msubckt sky130_fd_pr__nfet_01v8 -100 -1838 -99 -1837 l=200 w=1080 "gnd" "cursrc1gate" 400 0 "vp" 1080 0 "gnd" 1080 0
+device msubckt sky130_fd_pr__nfet_01v8 -100 -540 -99 -539 l=200 w=1080 "gnd" "cursrc1gate" 400 0 "vp" 1080 0 "gnd" 1080 0
+device msubckt sky130_fd_pr__nfet_01v8 -100 758 -99 759 l=200 w=1080 "gnd" "cursrc1gate" 400 0 "vp" 1080 0 "gnd" 1080 0
+device msubckt sky130_fd_pr__nfet_01v8 -100 2056 -99 2057 l=200 w=1080 "gnd" "cursrc1gate" 400 0 "vp" 1080 0 "gnd" 1080 0

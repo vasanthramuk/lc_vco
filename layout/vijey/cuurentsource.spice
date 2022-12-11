@@ -1,0 +1,11 @@
+* SPICE3 file created from cuurentsource.ext - technology: sky130A
+
+X0 VSUBS sky130_fd_pr__nfet_01v8_F8A7VK_0/cursrc1gate sky130_fd_pr__nfet_01v8_NFC7VK_0/curscrref_drain VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5.4e+06u l=1e+06u
+X1 VSUBS sky130_fd_pr__nfet_01v8_F8A7VK_0/cursrc1gate sky130_fd_pr__nfet_01v8_NFC7VK_0/curscrref_drain VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5.4e+06u l=1e+06u
+X2 VSUBS sky130_fd_pr__nfet_01v8_F8A7VK_0/cursrc1gate sky130_fd_pr__nfet_01v8_F8A7VK_0/vp VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5.4e+06u l=1e+06u
+X3 VSUBS sky130_fd_pr__nfet_01v8_F8A7VK_0/cursrc1gate sky130_fd_pr__nfet_01v8_F8A7VK_0/vp VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5.4e+06u l=1e+06u
+X4 VSUBS sky130_fd_pr__nfet_01v8_F8A7VK_0/cursrc1gate sky130_fd_pr__nfet_01v8_F8A7VK_0/vp VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5.4e+06u l=1e+06u
+X5 VSUBS sky130_fd_pr__nfet_01v8_F8A7VK_0/cursrc1gate sky130_fd_pr__nfet_01v8_F8A7VK_0/vp VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5.4e+06u l=1e+06u
+X6 VSUBS sky130_fd_pr__nfet_01v8_F8A7VK_0/cursrc1gate sky130_fd_pr__nfet_01v8_F8A7VK_0/vp VSUBS sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5.4e+06u l=1e+06u
+C0 sky130_fd_pr__nfet_01v8_F8A7VK_0/vp VSUBS 4.56fF **FLOATING
+C1 sky130_fd_pr__nfet_01v8_F8A7VK_0/cursrc1gate VSUBS 3.58fF **FLOATING

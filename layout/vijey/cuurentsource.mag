@@ -1,11 +1,15 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1670750879
-<< error_p >>
-rect 3334 -128 3336 -17
+timestamp 1670760168
+<< locali >>
+rect 3334 -128 3336 -16
 use sky130_fd_pr__nfet_01v8_F8A7VK  sky130_fd_pr__nfet_01v8_F8A7VK_0
 timestamp 1670750879
 transform 0 1 3293 -1 0 243
 box -449 -3571 371 3346
+use sky130_fd_pr__nfet_01v8_NFC7VK  sky130_fd_pr__nfet_01v8_NFC7VK_0
+timestamp 1670760168
+transform 0 1 -1636 -1 0 243
+box -443 -1399 331 1399
 << end >>

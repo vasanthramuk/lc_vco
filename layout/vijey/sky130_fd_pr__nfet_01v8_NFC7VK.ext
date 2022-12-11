@@ -1,0 +1,13 @@
+timestamp 1670760168
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+parameters sky130_fd_pr__nfet_01v8 l=l w=w a1=as p1=ps a2=ad p2=pd
+node "curscrref_drain" 5571 1857.98 -158 -1189 ndif 0 0 0 0 0 0 0 0 125280 4552 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 73984 4488 124220 5456 0 0 0 0 0 0 0 0 0 0
+node "a_n100_n1277#" 798 1232.11 -100 -1277 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 510716 5512 0 0 13600 936 22620 1188 0 0 0 0 0 0 0 0 0 0
+substrate "gatecurref" 0 0 -260 -1363 ppd 0 0 0 0 0 0 0 0 125280 4552 216104 12712 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 302362 17786 0 0 0 0 0 0 0 0 0 0 0 0
+cap "curscrref_drain" "a_n100_n1277#" 134.309
+device msubckt sky130_fd_pr__nfet_01v8 -100 -1189 -99 -1188 l=200 w=1080 "gatecurref" "a_n100_n1277#" 400 0 "curscrref_drain" 1080 0 "gatecurref" 1080 0
+device msubckt sky130_fd_pr__nfet_01v8 -100 109 -99 110 l=200 w=1080 "gatecurref" "a_n100_n1277#" 400 0 "curscrref_drain" 1080 0 "gatecurref" 1080 0
