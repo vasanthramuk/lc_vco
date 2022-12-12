@@ -1,15 +1,62 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1670760168
+timestamp 1670834788
 << locali >>
 rect 3334 -128 3336 -16
+<< viali >>
+rect 2424 2006 2592 2058
+rect 3912 758 4078 810
+<< metal1 >>
+rect 2412 2058 2610 2074
+rect 2412 2006 2424 2058
+rect 2592 2006 2610 2058
+rect 2412 2000 2610 2006
+rect 2412 1948 2608 2000
+rect 2466 841 2518 862
+rect 3953 852 4087 911
+rect 2425 798 2559 841
+rect 3890 810 4087 852
+rect 2412 733 2652 798
+rect 3890 758 3912 810
+rect 4078 758 4087 810
+rect 3890 733 4087 758
+rect 2412 656 4087 733
+rect 2421 487 4087 656
+rect 2421 457 3715 487
+rect 2923 355 3715 457
+rect 3059 353 3715 355
+rect 3127 347 3715 353
+use sky130_fd_pr__cap_var_lvt_E5Z3X6  sky130_fd_pr__cap_var_lvt_E5Z3X6_0
+timestamp 1670833676
+transform 1 0 2812 0 1 3872
+box -293 -1201 293 1201
 use sky130_fd_pr__nfet_01v8_F8A7VK  sky130_fd_pr__nfet_01v8_F8A7VK_0
-timestamp 1670750879
+timestamp 1670834788
 transform 0 1 3293 -1 0 243
-box -449 -3571 371 3346
+box -296 -3571 371 3346
+use sky130_fd_pr__nfet_01v8_F8A7VK  sky130_fd_pr__nfet_01v8_F8A7VK_1
+timestamp 1670834788
+transform 0 1 3293 -1 0 -631
+box -296 -3571 371 3346
 use sky130_fd_pr__nfet_01v8_NFC7VK  sky130_fd_pr__nfet_01v8_NFC7VK_0
-timestamp 1670760168
+timestamp 1670823238
 transform 0 1 -1636 -1 0 243
 box -443 -1399 331 1399
+use sky130_fd_pr__nfet_01v8_NFC7VK  sky130_fd_pr__nfet_01v8_NFC7VK_1
+timestamp 1670823238
+transform 0 1 -1631 -1 0 -629
+box -443 -1399 331 1399
+use sky130_fd_pr__nfet_01v8_NFC7VK  sky130_fd_pr__nfet_01v8_NFC7VK_2
+timestamp 1670823238
+transform 0 1 -1631 -1 0 1071
+box -443 -1399 331 1399
+use sky130_fd_pr__nfet_01v8_TPE47J  sky130_fd_pr__nfet_01v8_TPE47J_0
+timestamp 1670833676
+transform 0 1 3254 -1 0 1404
+box -683 -1119 683 1119
+use sky130_fd_pr__nfet_01v8_VYRQW9  sky130_fd_pr__nfet_01v8_VYRQW9_0
+timestamp 1670822484
+transform 0 1 3220 -1 0 1149
+box 0 0 1 1
 << end >>
