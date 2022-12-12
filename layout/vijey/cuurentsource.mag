@@ -1,18 +1,25 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1670834788
+timestamp 1670840667
 << locali >>
 rect 3334 -128 3336 -16
 << viali >>
 rect 2424 2006 2592 2058
 rect 3912 758 4078 810
 << metal1 >>
+rect 2766 4382 2858 4388
+rect 2766 4330 2778 4382
+rect 2846 4330 2858 4382
+rect 2766 4324 2858 4330
+rect 2705 2336 3765 4251
 rect 2412 2058 2610 2074
 rect 2412 2006 2424 2058
 rect 2592 2006 2610 2058
 rect 2412 2000 2610 2006
 rect 2412 1948 2608 2000
+rect 2740 1628 2990 2268
+rect 3490 1628 3740 2268
 rect 2466 841 2518 862
 rect 3953 852 4087 911
 rect 2425 798 2559 841
@@ -27,9 +34,60 @@ rect 2421 457 3715 487
 rect 2923 355 3715 457
 rect 3059 353 3715 355
 rect 3127 347 3715 353
+<< via1 >>
+rect 2778 4330 2846 4382
+<< metal2 >>
+rect 2622 5286 2990 5524
+rect 2622 4986 2686 5286
+rect 2922 4986 2990 5286
+rect 2622 4382 2990 4986
+rect 2622 4330 2778 4382
+rect 2846 4330 2990 4382
+rect 2622 4196 2990 4330
+rect 3462 5286 3830 5524
+rect 3462 4986 3532 5286
+rect 3768 4986 3830 5286
+rect 3462 4196 3830 4986
+<< via2 >>
+rect 2686 4986 2922 5286
+rect 3532 4986 3768 5286
+<< metal3 >>
+rect 1972 5286 2990 5572
+rect 1972 4986 2686 5286
+rect 2922 4986 2990 5286
+rect 1972 4778 2990 4986
+rect 3462 5286 4500 5572
+rect 3462 4986 3532 5286
+rect 3768 4986 4500 5286
+rect 3462 4776 4500 4986
+rect -1074 3450 863 4201
+rect 5645 3434 7605 4201
+<< metal4 >>
+rect -1090 3434 870 4201
+rect 5645 3434 7605 4201
+use sky130_fd_pr__cap_mim_m3_1_8UNQ5L  sky130_fd_pr__cap_mim_m3_1_8UNQ5L_0
+timestamp 1670838128
+transform 1 0 30 0 1 1477
+box -2413 -2363 2412 2363
+use sky130_fd_pr__cap_mim_m3_1_8UNQ5L  sky130_fd_pr__cap_mim_m3_1_8UNQ5L_1
+timestamp 1670838128
+transform -1 0 6392 0 -1 1477
+box -2413 -2363 2412 2363
+use sky130_fd_pr__cap_mim_m3_1_8UNQ5L  sky130_fd_pr__cap_mim_m3_1_8UNQ5L_2
+timestamp 1670838128
+transform 1 0 30 0 1 6289
+box -2413 -2363 2412 2363
+use sky130_fd_pr__cap_mim_m3_1_8UNQ5L  sky130_fd_pr__cap_mim_m3_1_8UNQ5L_3
+timestamp 1670838128
+transform -1 0 6392 0 -1 6289
+box -2413 -2363 2412 2363
 use sky130_fd_pr__cap_var_lvt_E5Z3X6  sky130_fd_pr__cap_var_lvt_E5Z3X6_0
 timestamp 1670833676
-transform 1 0 2812 0 1 3872
+transform 1 0 2812 0 1 3292
+box -293 -1201 293 1201
+use sky130_fd_pr__cap_var_lvt_E5Z3X6  sky130_fd_pr__cap_var_lvt_E5Z3X6_1
+timestamp 1670833676
+transform 1 0 3655 0 1 3292
 box -293 -1201 293 1201
 use sky130_fd_pr__nfet_01v8_F8A7VK  sky130_fd_pr__nfet_01v8_F8A7VK_0
 timestamp 1670834788
@@ -54,6 +112,14 @@ box -443 -1399 331 1399
 use sky130_fd_pr__nfet_01v8_TPE47J  sky130_fd_pr__nfet_01v8_TPE47J_0
 timestamp 1670833676
 transform 0 1 3254 -1 0 1404
+box -683 -1119 683 1119
+use sky130_fd_pr__nfet_01v8_TPE47J  sky130_fd_pr__nfet_01v8_TPE47J_1
+timestamp 1670833676
+transform 0 1 5479 -1 0 1404
+box -683 -1119 683 1119
+use sky130_fd_pr__nfet_01v8_TPE47J  sky130_fd_pr__nfet_01v8_TPE47J_2
+timestamp 1670833676
+transform 0 1 1033 -1 0 1404
 box -683 -1119 683 1119
 use sky130_fd_pr__nfet_01v8_VYRQW9  sky130_fd_pr__nfet_01v8_VYRQW9_0
 timestamp 1670822484
