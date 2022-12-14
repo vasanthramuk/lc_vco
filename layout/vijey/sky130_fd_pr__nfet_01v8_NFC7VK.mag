@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1670823238
+timestamp 1671040802
 << pwell >>
 rect -296 -1399 296 1399
 << nmos >>
@@ -108,10 +108,6 @@ rect -96 -1227 96 -1221
 rect -96 -1261 -84 -1227
 rect 84 -1261 96 -1227
 rect -96 -1267 96 -1261
-<< labels >>
-rlabel metal1 -413 -20 -377 20 1 curscrref_drain
-rlabel pwell -31 -1262 13 -1226 1 gatecurref
-rlabel locali 315 -8 327 14 1 gnd
 << properties >>
 string FIXED_BBOX -243 -1346 243 1346
 string gencell sky130_fd_pr__nfet_01v8
