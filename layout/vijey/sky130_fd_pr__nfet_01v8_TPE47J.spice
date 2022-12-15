@@ -1,0 +1,13 @@
+* SPICE3 file created from sky130_fd_pr__nfet_01v8_TPE47J.ext - technology: sky130A
+
+X0 a_n647_n1083# a_n487_n997# a_n487_21# a_n647_n1083# sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=4e+06u l=1e+06u
+X1 a_n647_n1083# a_n487_21# a_n487_n997# a_n647_n1083# sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=4e+06u l=1e+06u
+X2 a_n487_n997# a_n487_21# a_n647_n1083# a_n647_n1083# sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=4e+06u l=1e+06u
+X3 a_n647_n1083# a_n487_21# a_n487_n997# a_n647_n1083# sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=4e+06u l=1e+06u
+X4 a_n487_21# a_n487_n997# a_n647_n1083# a_n647_n1083# sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=4e+06u l=1e+06u
+X5 a_n647_n1083# a_n487_n997# a_n487_21# a_n647_n1083# sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=4e+06u l=1e+06u
+X6 a_n487_n997# a_n487_21# a_n647_n1083# a_n647_n1083# sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=4e+06u l=1e+06u
+X7 a_n487_21# a_n487_n997# a_n647_n1083# a_n647_n1083# sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=4e+06u l=1e+06u
+C0 a_n487_21# a_n487_n997# 2.23fF
+C1 a_n487_n997# a_n647_n1083# 3.56fF **FLOATING
+C2 a_n487_21# a_n647_n1083# 3.57fF **FLOATING

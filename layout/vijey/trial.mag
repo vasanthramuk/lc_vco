@@ -1,9 +1,14 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1671085739
+timestamp 1671093175
+<< error_s >>
+rect 2778 4378 2846 4382
+rect 2769 4318 2857 4378
+rect 2755 4306 2873 4307
+rect 3598 4306 3716 4307
 << locali >>
-rect 3334 -128 3336 -16
+rect 3228 -138 3428 130
 << viali >>
 rect 2424 2006 2592 2058
 rect 3912 758 4078 810
@@ -83,55 +88,36 @@ timestamp 1670838128
 transform -1 0 6392 0 -1 6289
 box -2413 -2363 2412 2363
 use sky130_fd_pr__cap_var_lvt_E5Z3X6  sky130_fd_pr__cap_var_lvt_E5Z3X6_0
-timestamp 1670833676
+timestamp 1671093175
 transform 1 0 2812 0 1 3292
 box -293 -1201 293 1201
 use sky130_fd_pr__cap_var_lvt_E5Z3X6  sky130_fd_pr__cap_var_lvt_E5Z3X6_1
-timestamp 1670833676
+timestamp 1671093175
 transform 1 0 3655 0 1 3292
 box -293 -1201 293 1201
 use sky130_fd_pr__nfet_01v8_F8A7VK  sky130_fd_pr__nfet_01v8_F8A7VK_0
-timestamp 1671040802
+timestamp 1671089082
 transform 0 1 3293 -1 0 243
 box -296 -3571 371 3346
-use sky130_fd_pr__nfet_01v8_F8A7VK  sky130_fd_pr__nfet_01v8_F8A7VK_1
-timestamp 1671040802
-transform 0 1 3293 -1 0 -631
-box -296 -3571 371 3346
 use sky130_fd_pr__nfet_01v8_NFC7VK  sky130_fd_pr__nfet_01v8_NFC7VK_0
-timestamp 1671085739
+timestamp 1671089082
 transform 0 1 -1636 -1 0 243
 box -449 -1399 331 1399
-use sky130_fd_pr__nfet_01v8_NFC7VK  sky130_fd_pr__nfet_01v8_NFC7VK_1
-timestamp 1671085739
-transform 0 1 -1631 -1 0 -629
-box -449 -1399 331 1399
-use sky130_fd_pr__nfet_01v8_NFC7VK  sky130_fd_pr__nfet_01v8_NFC7VK_2
-timestamp 1671085739
-transform 0 1 -1631 -1 0 1071
-box -449 -1399 331 1399
 use sky130_fd_pr__nfet_01v8_TPE47J  sky130_fd_pr__nfet_01v8_TPE47J_0
-timestamp 1671085739
+timestamp 1671089082
 transform 0 1 3254 -1 0 1404
-box -683 -1119 683 1119
-use sky130_fd_pr__nfet_01v8_TPE47J  sky130_fd_pr__nfet_01v8_TPE47J_1
-timestamp 1671085739
-transform 0 1 5479 -1 0 1404
-box -683 -1119 683 1119
-use sky130_fd_pr__nfet_01v8_TPE47J  sky130_fd_pr__nfet_01v8_TPE47J_2
-timestamp 1671085739
-transform 0 1 1033 -1 0 1404
 box -683 -1119 683 1119
 use sky130_fd_pr__nfet_01v8_VYRQW9  sky130_fd_pr__nfet_01v8_VYRQW9_0
 timestamp 1670822484
 transform 0 1 3220 -1 0 1149
 box 0 0 1 1
 << labels >>
-rlabel space 3304 -124 3334 -70 1 gnd
 rlabel metal1 3140 530 3532 694 1 vp
 rlabel metal1 -258 192 -48 310 1 curgate
-rlabel space -1695 587 -1561 674 1 idealcs
-rlabel space -1646 -64 -1621 -35 1 gnd
 rlabel space 2979 1511 3133 1562 1 vout_m
 rlabel space 3346 1268 3528 1319 1 vout_p
+rlabel space -1646 -72 -1620 -36 1 gnd
+port 1 n
+rlabel locali 3304 -124 3334 -70 1 gnd
+rlabel metal1 3112 2888 3368 3624 1 vcntrl
 << end >>
