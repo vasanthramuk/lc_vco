@@ -1,0 +1,54 @@
+
+Circuit 1 cell sky130_fd_pr__nfet_01v8 and Circuit 2 cell sky130_fd_pr__nfet_01v8 are black boxes.
+Equate elements:  no current cell.
+Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
+
+Class sky130_fd_pr__nfet_01v8_TPE47J.spice (0):  Merged 4 parallel devices.
+Subcircuit summary:
+Circuit 1: sky130_fd_pr__nfet_01v8_TPE47J. |Circuit 2: crosscoupled.spice              
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__nfet_01v8 (8->4)             |sky130_fd_pr__nfet_01v8 (2) **Mismatch**   
+c (1)                                      |(no matching element)                      
+**FLOATING (2)                             |(no matching element)                      
+Number of devices: 7 **Mismatch**          |Number of devices: 2 **Mismatch**          
+Number of nets: 3                          |Number of nets: 3                          
+---------------------------------------------------------------------------------------
+NET mismatches: Class fragments follow (with fanout counts):
+Circuit 1: sky130_fd_pr__nfet_01v8_TPE47J. |Circuit 2: crosscoupled.spice              
+
+---------------------------------------------------------------------------------------
+Net: a_n647_n1083#                         |Net: vp                                    
+  sky130_fd_pr__nfet_01v8/3 = 2            |  sky130_fd_pr__nfet_01v8/3 = 2            
+  sky130_fd_pr__nfet_01v8/4 = 4            |  sky130_fd_pr__nfet_01v8/4 = 2            
+  sky130_fd_pr__nfet_01v8/1 = 2            |                                           
+  **FLOATING/bottom = 2                    |                                           
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: a_n487_21#                            |(no matching net)                          
+  sky130_fd_pr__nfet_01v8/3 = 1            |                                           
+  sky130_fd_pr__nfet_01v8/2 = 2            |                                           
+  sky130_fd_pr__nfet_01v8/1 = 1            |                                           
+  c/top = 1                                |                                           
+  **FLOATING/top = 1                       |                                           
+                                           |                                           
+Net: a_n487_n997#                          |(no matching net)                          
+  sky130_fd_pr__nfet_01v8/2 = 2            |                                           
+  sky130_fd_pr__nfet_01v8/3 = 1            |                                           
+  sky130_fd_pr__nfet_01v8/1 = 1            |                                           
+  c/bottom = 1                             |                                           
+  **FLOATING/top = 1                       |                                           
+---------------------------------------------------------------------------------------
+DEVICE mismatches: Class fragments follow (with node fanout counts):
+Circuit 1: sky130_fd_pr__nfet_01v8_TPE47J. |Circuit 2: crosscoupled.spice              
+
+---------------------------------------------------------------------------------------
+Instance: c:0                              |(no matching instance)                     
+  top = 6                                  |                                           
+  bottom = 6                               |                                           
+---------------------------------------------------------------------------------------
+Netlists do not match.
+Cells have no pins;  pin matching not needed.
+Device classes sky130_fd_pr__nfet_01v8_TPE47J.spice and crosscoupled.spice are equivalent.
+
+Final result: Netlists do not match.

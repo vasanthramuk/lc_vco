@@ -1,0 +1,137 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1671085739
+<< locali >>
+rect 3334 -128 3336 -16
+<< viali >>
+rect 2424 2006 2592 2058
+rect 3912 758 4078 810
+<< metal1 >>
+rect 2766 4382 2858 4388
+rect 2766 4330 2778 4382
+rect 2846 4330 2858 4382
+rect 2766 4324 2858 4330
+rect 2705 2336 3765 4251
+rect 2412 2058 2610 2074
+rect 2412 2006 2424 2058
+rect 2592 2006 2610 2058
+rect 2412 2000 2610 2006
+rect 2412 1948 2608 2000
+rect 2740 1628 2990 2268
+rect 3490 1628 3740 2268
+rect 2466 841 2518 862
+rect 3953 852 4087 911
+rect 2425 798 2559 841
+rect 3890 810 4087 852
+rect 2412 733 2652 798
+rect 3890 758 3912 810
+rect 4078 758 4087 810
+rect 3890 733 4087 758
+rect 2412 656 4087 733
+rect 2421 487 4087 656
+rect 2421 457 3715 487
+rect 2923 355 3715 457
+rect 3059 353 3715 355
+rect 3127 347 3715 353
+rect -406 160 118 324
+<< via1 >>
+rect 2778 4330 2846 4382
+<< metal2 >>
+rect 2622 5286 2990 5524
+rect 2622 4986 2686 5286
+rect 2922 4986 2990 5286
+rect 2622 4382 2990 4986
+rect 2622 4330 2778 4382
+rect 2846 4330 2990 4382
+rect 2622 4196 2990 4330
+rect 3462 5286 3830 5524
+rect 3462 4986 3532 5286
+rect 3768 4986 3830 5286
+rect 3462 4196 3830 4986
+<< via2 >>
+rect 2686 4986 2922 5286
+rect 3532 4986 3768 5286
+<< metal3 >>
+rect 1972 5286 2990 5572
+rect 1972 4986 2686 5286
+rect 2922 4986 2990 5286
+rect 1972 4778 2990 4986
+rect 3462 5286 4500 5572
+rect 3462 4986 3532 5286
+rect 3768 4986 4500 5286
+rect 3462 4776 4500 4986
+rect -1074 3450 863 4201
+rect 5645 3434 7605 4201
+<< metal4 >>
+rect -1090 3434 870 4201
+rect 5645 3434 7605 4201
+use sky130_fd_pr__cap_mim_m3_1_8UNQ5L  sky130_fd_pr__cap_mim_m3_1_8UNQ5L_0
+timestamp 1670838128
+transform 1 0 30 0 1 1477
+box -2413 -2363 2412 2363
+use sky130_fd_pr__cap_mim_m3_1_8UNQ5L  sky130_fd_pr__cap_mim_m3_1_8UNQ5L_1
+timestamp 1670838128
+transform -1 0 6392 0 -1 1477
+box -2413 -2363 2412 2363
+use sky130_fd_pr__cap_mim_m3_1_8UNQ5L  sky130_fd_pr__cap_mim_m3_1_8UNQ5L_2
+timestamp 1670838128
+transform 1 0 30 0 1 6289
+box -2413 -2363 2412 2363
+use sky130_fd_pr__cap_mim_m3_1_8UNQ5L  sky130_fd_pr__cap_mim_m3_1_8UNQ5L_3
+timestamp 1670838128
+transform -1 0 6392 0 -1 6289
+box -2413 -2363 2412 2363
+use sky130_fd_pr__cap_var_lvt_E5Z3X6  sky130_fd_pr__cap_var_lvt_E5Z3X6_0
+timestamp 1670833676
+transform 1 0 2812 0 1 3292
+box -293 -1201 293 1201
+use sky130_fd_pr__cap_var_lvt_E5Z3X6  sky130_fd_pr__cap_var_lvt_E5Z3X6_1
+timestamp 1670833676
+transform 1 0 3655 0 1 3292
+box -293 -1201 293 1201
+use sky130_fd_pr__nfet_01v8_F8A7VK  sky130_fd_pr__nfet_01v8_F8A7VK_0
+timestamp 1671040802
+transform 0 1 3293 -1 0 243
+box -296 -3571 371 3346
+use sky130_fd_pr__nfet_01v8_F8A7VK  sky130_fd_pr__nfet_01v8_F8A7VK_1
+timestamp 1671040802
+transform 0 1 3293 -1 0 -631
+box -296 -3571 371 3346
+use sky130_fd_pr__nfet_01v8_NFC7VK  sky130_fd_pr__nfet_01v8_NFC7VK_0
+timestamp 1671085739
+transform 0 1 -1636 -1 0 243
+box -449 -1399 331 1399
+use sky130_fd_pr__nfet_01v8_NFC7VK  sky130_fd_pr__nfet_01v8_NFC7VK_1
+timestamp 1671085739
+transform 0 1 -1631 -1 0 -629
+box -449 -1399 331 1399
+use sky130_fd_pr__nfet_01v8_NFC7VK  sky130_fd_pr__nfet_01v8_NFC7VK_2
+timestamp 1671085739
+transform 0 1 -1631 -1 0 1071
+box -449 -1399 331 1399
+use sky130_fd_pr__nfet_01v8_TPE47J  sky130_fd_pr__nfet_01v8_TPE47J_0
+timestamp 1671085739
+transform 0 1 3254 -1 0 1404
+box -683 -1119 683 1119
+use sky130_fd_pr__nfet_01v8_TPE47J  sky130_fd_pr__nfet_01v8_TPE47J_1
+timestamp 1671085739
+transform 0 1 5479 -1 0 1404
+box -683 -1119 683 1119
+use sky130_fd_pr__nfet_01v8_TPE47J  sky130_fd_pr__nfet_01v8_TPE47J_2
+timestamp 1671085739
+transform 0 1 1033 -1 0 1404
+box -683 -1119 683 1119
+use sky130_fd_pr__nfet_01v8_VYRQW9  sky130_fd_pr__nfet_01v8_VYRQW9_0
+timestamp 1670822484
+transform 0 1 3220 -1 0 1149
+box 0 0 1 1
+<< labels >>
+rlabel space 3304 -124 3334 -70 1 gnd
+rlabel metal1 3140 530 3532 694 1 vp
+rlabel metal1 -258 192 -48 310 1 curgate
+rlabel space -1695 587 -1561 674 1 idealcs
+rlabel space -1646 -64 -1621 -35 1 gnd
+rlabel space 2979 1511 3133 1562 1 vout_m
+rlabel space 3346 1268 3528 1319 1 vout_p
+<< end >>

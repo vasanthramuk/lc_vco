@@ -1,0 +1,38 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1670740696
+<< pwell >>
+rect 7166 536 8624 539
+rect 5382 144 5598 342
+rect 6682 144 6896 342
+rect 6983 -50 8829 536
+rect 7166 -53 8624 -50
+<< poly >>
+rect 1240 144 1453 342
+rect 4084 144 4300 342
+rect 5382 144 5598 342
+rect 6682 144 6896 342
+rect 7980 144 8194 342
+<< locali >>
+rect 3460 580 8800 620
+rect 3460 360 3500 580
+rect 4780 360 4820 580
+rect 6100 360 6140 580
+rect 7400 360 7440 580
+rect 8762 362 8798 580
+rect 3460 -100 3500 120
+rect 4780 -100 4820 120
+rect 6080 -100 6120 120
+rect 7400 -100 7440 120
+rect 8760 -100 8800 120
+rect 3460 -140 8800 -100
+use sky130_fd_pr__nfet_01v8_F8A7VK  sky130_fd_pr__nfet_01v8_F8A7VK_0
+timestamp 1670733274
+transform 0 1 6139 -1 0 243
+box -296 -3346 296 3346
+use sky130_fd_pr__nfet_01v8_NFC7VK  sky130_fd_pr__nfet_01v8_NFC7VK_0
+timestamp 1670733274
+transform 0 1 1346 -1 0 243
+box -296 -1399 296 1399
+<< end >>
