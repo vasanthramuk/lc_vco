@@ -1,4 +1,4 @@
-v {xschem version=3.1.0 file_version=1.2
+v {xschem version=3.1.0 file_version=1.2 
 }
 G {}
 K {}
@@ -47,10 +47,6 @@ N -1150 -910 -1150 -890 {
 lab=VDD}
 N -1150 -830 -1150 -810 {
 lab=vout_m}
-N -530 -830 -530 -810 {
-lab=vcntrl}
-N -530 -750 -530 -730 {
-lab=GND}
 N -1150 -810 -1150 -680 {
 lab=vout_m}
 N -1090 -710 -1050 -710 {
@@ -123,6 +119,10 @@ N -1230 -540 -1230 -500 {
 lab=VDD}
 N -1070 -510 -1070 -400 {
 lab=vp}
+N -1390 -840 -1390 -820 {
+lab=vcntrl}
+N -1390 -760 -1390 -740 {
+lab=GND}
 C {devices/code.sym} -770 -770 0 0 {name=LIBS only_toplevel=false value=
 "
 .option wnflag = 1
@@ -136,11 +136,6 @@ C {devices/lab_pin.sym} -910 -650 1 0 {name=l3 sig_type=std_logic lab=vout_p}
 C {devices/lab_pin.sym} -1210 -650 1 0 {name=l4 sig_type=std_logic lab=vout_m}
 C {devices/lab_pin.sym} -1040 -510 3 0 {name=l5 sig_type=std_logic lab=vp}
 C {devices/vsource.sym} -1530 -750 0 0 {name=V2 value="pwl(0 0 1n 1.8)"}
-C {devices/vsource.sym} -530 -780 0 0 {name=V3 value=1.8}
-C {devices/gnd.sym} -530 -730 0 0 {name=l6 lab=GND}
-C {devices/lab_pin.sym} -530 -820 0 0 {name=l7 sig_type=std_logic lab=vcntrl
-
-}
 C {devices/vdd.sym} -1530 -800 0 0 {name=l8 lab=VDD}
 C {sky130_fd_pr/cap_var_lvt.sym} -1120 -710 3 0 {name=C5 model=cap_var_lvt W=10 L=0.5 VM=1 spiceprefix=X}
 C {sky130_fd_pr/cap_var_lvt.sym} -1020 -710 1 1 {name=C6 model=cap_var_lvt W=10 L=0.5 VM=1 spiceprefix=X}
@@ -224,9 +219,10 @@ C {devices/code_shown.sym} -860 -590 0 0 {name=SPICE2 only_toplevel=false
 value=
 "
 .control
+set color0=white
 let ctrl=1.8
 while ctrl ge 1.8
-	tran 1p 1000n 700n
+	tran 1p 500n
 	let diff=(v(vout_p)-v(vout_m))
 	*plot v(vout_p)
 	plot diff
@@ -251,3 +247,8 @@ save all
 
 .endc
 "}
+C {devices/vsource.sym} -1390 -790 0 0 {name=V1 value=1.8}
+C {devices/gnd.sym} -1390 -740 0 0 {name=l6 lab=GND}
+C {devices/lab_pin.sym} -1390 -830 0 0 {name=l7 sig_type=std_logic lab=vcntrl
+
+}

@@ -44,6 +44,7 @@ C {devices/code_shown.sym} -310 -330 0 0 {name=s1 only_toplevel=false value="
 .include /usr/local/share/pdk/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__ind_05_220.model.spice
 
 .control
+set color0=white
 ac lin 100 1G 2G
 plot 20*log(V(positive))
 

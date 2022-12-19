@@ -1,4 +1,4 @@
-v {xschem version=3.1.0 file_version=1.2
+v {xschem version=3.1.0 file_version=1.2 
 }
 G {}
 K {}
@@ -41,6 +41,7 @@ C {devices/code_shown.sym} 960 -240 0 0 {name=SPICE1 only_toplevel=false
 value=
 "
 .control
+	set color0=white
 	foreach ctr 0
 	alter @v2[dc]=$ctrl
 	ac lin 100000 1400meg 1.8G
