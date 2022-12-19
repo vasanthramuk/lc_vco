@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1671093175
+timestamp 1671429600
 << error_s >>
 rect 2778 4378 2846 4382
 rect 2769 4318 2857 4378
@@ -120,4 +120,6 @@ rlabel space -1646 -72 -1620 -36 1 gnd
 port 1 n
 rlabel locali 3304 -124 3334 -70 1 gnd
 rlabel metal1 3112 2888 3368 3624 1 vcntrl
+rlabel metal2 2720 4536 2902 4688 1 left_cap
+rlabel metal2 3570 4610 3744 4720 1 right_cap
 << end >>
