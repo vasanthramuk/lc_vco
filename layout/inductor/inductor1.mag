@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1670045198
+timestamp 1670048899
 use sky130_fd_pr__rf_test_coil1  sky130_fd_pr__rf_test_coil1_0 $PDKPATH/libs.ref/sky130_fd_pr/mag
 timestamp 1661259367
 transform 1 0 7252 0 1 7252

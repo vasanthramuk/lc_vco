@@ -1,0 +1,3 @@
+* SPICE3 file created from resistor.ext - technology: sky130A
+
+X0 sky130_fd_pr__res_xhigh_po_0p35_9BKSU4_0/a_n35_n482# sky130_fd_pr__res_xhigh_po_0p35_9BKSU4_0/a_n35_50# VSUBS sky130_fd_pr__res_xhigh_po_0p35 l=500000u

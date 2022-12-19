@@ -1,0 +1,22 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1670838583
+<< metal3 >>
+rect 1730 -418 3658 1416
+<< metal4 >>
+rect 1730 -418 3658 1416
+use sky130_fd_pr__cap_mim_m3_1_8UNQ5L  sky130_fd_pr__cap_mim_m3_1_8UNQ5L_0
+timestamp 1670838278
+transform 1 0 2577 0 1 3029
+box -2413 -2363 2412 2363
+use sky130_fd_pr__cap_mim_m3_1_8UNQ5L  sky130_fd_pr__cap_mim_m3_1_8UNQ5L_1
+timestamp 1670838278
+transform 1 0 2577 0 1 -2055
+box -2413 -2363 2412 2363
+<< labels >>
+rlabel space 1634 -2056 2634 -1434 5 up
+rlabel space 3216 -2558 4090 -1814 5 down
+rlabel metal4 2386 400 3042 598 5 up
+rlabel metal3 3284 302 3454 462 5 down
+<< end >>

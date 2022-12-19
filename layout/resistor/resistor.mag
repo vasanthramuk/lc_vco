@@ -1,0 +1,9 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1670046039
+use sky130_fd_pr__res_xhigh_po_0p35_9BKSU4  sky130_fd_pr__res_xhigh_po_0p35_9BKSU4_0
+timestamp 1670046039
+transform 1 0 148 0 1 595
+box -201 -648 201 648
+<< end >>

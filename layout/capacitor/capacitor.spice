@@ -1,0 +1,7 @@
+* SPICE3 file created from capacitor.ext - technology: sky130A
+
+X0 up down sky130_fd_pr__cap_mim_m3_1 l=2.263e+07u w=2.263e+07u
+X1 up down sky130_fd_pr__cap_mim_m3_1 l=2.263e+07u w=2.263e+07u
+C0 up down 89.41fF
+C1 up VSUBS 3.72fF **FLOATING
+C2 down VSUBS 14.24fF **FLOATING
