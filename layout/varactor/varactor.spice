@@ -1,4 +1,0 @@
-* SPICE3 file created from varactor.ext - technology: sky130A
-
-X0 sky130_fd_pr__cap_var_UFP695_0/a_n50_n1088# sky130_fd_pr__cap_var_UFP695_0/w_n223_n1131# VSUBS sky130_fd_pr__cap_var w=1e+07u l=500000u
-C0 sky130_fd_pr__cap_var_UFP695_0/w_n223_n1131# VSUBS 4.62fF **FLOATING

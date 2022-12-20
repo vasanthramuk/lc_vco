@@ -1,9 +1,0 @@
-magic
-tech sky130A
-magscale 1 2
-timestamp 1670046431
-use sky130_fd_pr__cap_var_UFP695  sky130_fd_pr__cap_var_UFP695_0
-timestamp 1670046431
-transform 1 0 409 0 1 1317
-box -514 -1422 514 1422
-<< end >>
