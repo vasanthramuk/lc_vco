@@ -1,0 +1,36 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1671532265
+<< psubdiff >>
+rect -919 8014 -802 8039
+rect -919 7967 -887 8014
+rect -829 7967 -802 8014
+rect -919 7943 -802 7967
+<< psubdiffcont >>
+rect -887 7967 -829 8014
+<< locali >>
+rect -910 8014 -807 8037
+rect -910 7967 -887 8014
+rect -829 7967 -807 8014
+rect -218 7988 52 8214
+rect -910 7948 -807 7967
+rect -370 2768 50 3820
+<< metal1 >>
+rect 146 6462 337 6876
+rect 368 2750 620 3836
+use sky130_fd_pr__nfet_01v8_F8A7VK  sky130_fd_pr__nfet_01v8_F8A7VK_0
+timestamp 1671525571
+transform 1 0 243 0 1 3293
+box -296 -3346 296 3346
+use sky130_fd_pr__nfet_01v8_NFC7VK  sky130_fd_pr__nfet_01v8_NFC7VK_0
+timestamp 1671525571
+transform 1 0 241 0 1 8098
+box -296 -1399 296 1399
+<< labels >>
+rlabel metal1 202 6635 301 6697 1 curgate
+rlabel locali -880 7978 -840 8007 1 body
+rlabel locali -240 3228 -160 3432 1 gnd1
+rlabel locali -162 8062 -130 8134 1 gnd2
+rlabel metal1 570 3418 604 3512 1 abc
+<< end >>

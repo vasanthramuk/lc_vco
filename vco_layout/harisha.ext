@@ -1,0 +1,32 @@
+timestamp 1671532265
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+use sky130_fd_pr__nfet_01v8_NFC7VK sky130_fd_pr__nfet_01v8_NFC7VK_0 1 0 241 0 1 8098
+use sky130_fd_pr__nfet_01v8_F8A7VK sky130_fd_pr__nfet_01v8_F8A7VK_0 1 0 243 0 1 3293
+node "abc" 1 643.316 368 2750 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 273672 2676 0 0 0 0 0 0 0 0 0 0
+node "curgate" 0 296.412 146 6462 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 79074 1210 0 0 0 0 0 0 0 0 0 0
+node "gnd1" 32 1007.7 -370 2768 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 441840 2944 0 0 0 0 0 0 0 0 0 0 0 0
+node "gnd2" 15 255.377 -218 7988 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 61020 992 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "body" 0 0 -919 7943 ppd 0 0 0 0 0 0 0 0 0 0 11232 426 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9167 384 0 0 0 0 0 0 0 0 0 0 0 0
+cap "abc" "gnd1" 152.132
+cap "sky130_fd_pr__nfet_01v8_F8A7VK_0/a_100_n3136#" "sky130_fd_pr__nfet_01v8_F8A7VK_0/a_n100_n3224#" 0.0994442
+cap "sky130_fd_pr__nfet_01v8_F8A7VK_0/a_100_n3136#" "sky130_fd_pr__nfet_01v8_F8A7VK_0/a_n260_n3310#" -23.5937
+cap "sky130_fd_pr__nfet_01v8_F8A7VK_0/a_n260_n3310#" "sky130_fd_pr__nfet_01v8_F8A7VK_0/a_100_n3136#" 102.897
+cap "sky130_fd_pr__nfet_01v8_NFC7VK_0/a_n100_n1277#" "sky130_fd_pr__nfet_01v8_NFC7VK_0/a_n260_n1363#" 0.161277
+cap "sky130_fd_pr__nfet_01v8_NFC7VK_0/a_n100_n1277#" "sky130_fd_pr__nfet_01v8_F8A7VK_0/a_100_n3136#" 1.09934
+cap "sky130_fd_pr__nfet_01v8_NFC7VK_0/a_n260_n1363#" "sky130_fd_pr__nfet_01v8_NFC7VK_0/a_n100_n1277#" 65.5576
+cap "sky130_fd_pr__nfet_01v8_NFC7VK_0/a_n260_n1363#" "sky130_fd_pr__nfet_01v8_F8A7VK_0/a_n260_n3310#" 2.26294
+cap "sky130_fd_pr__nfet_01v8_NFC7VK_0/a_n260_n1363#" "sky130_fd_pr__nfet_01v8_F8A7VK_0/a_100_n3136#" 1.16361
+cap "sky130_fd_pr__nfet_01v8_NFC7VK_0/a_n100_n1277#" "sky130_fd_pr__nfet_01v8_F8A7VK_0/a_n260_n3310#" 0.0178407
+cap "sky130_fd_pr__nfet_01v8_NFC7VK_0/a_n260_n1363#" "sky130_fd_pr__nfet_01v8_NFC7VK_0/a_n100_n1277#" 7.55955
+cap "sky130_fd_pr__nfet_01v8_NFC7VK_0/a_n260_n1363#" "sky130_fd_pr__nfet_01v8_F8A7VK_0/a_n260_n3310#" 0.0020071
+merge "sky130_fd_pr__nfet_01v8_F8A7VK_0/a_n100_n3224#" "sky130_fd_pr__nfet_01v8_NFC7VK_0/a_n100_n1277#" -224.576 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -17145 -942 0 0 0 0 0 0 0 0 0 0
+merge "sky130_fd_pr__nfet_01v8_NFC7VK_0/a_n100_n1277#" "curgate"
+merge "sky130_fd_pr__nfet_01v8_F8A7VK_0/a_100_n3136#" "abc" -491.31 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -39096 -2244 0 0 0 0 0 0 0 0 0 0
+merge "sky130_fd_pr__nfet_01v8_NFC7VK_0/a_n260_n1363#" "gnd2" -1351.94 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -457886 -3538 0 0 0 0 0 0 0 0 0 0 0 0
+merge "gnd2" "sky130_fd_pr__nfet_01v8_F8A7VK_0/a_n260_n3310#"
+merge "sky130_fd_pr__nfet_01v8_F8A7VK_0/a_n260_n3310#" "body"
+merge "body" "gnd1"

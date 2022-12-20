@@ -1,0 +1,22 @@
+* SPICE3 file created from naaisekar.ext - technology: sky130A
+
+X0 curgate curgate vp vp sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5.4e+06u l=1e+06u
+X1 curgate curgate vp vp sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5.4e+06u l=1e+06u
+X2 vp vout_p vout_n vp sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=4e+06u l=1e+06u
+X3 vp vout_n vout_p vp sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=4e+06u l=1e+06u
+X4 vout_p vout_n vp vp sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=4e+06u l=1e+06u
+X5 vp vout_n vout_p vp sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=4e+06u l=1e+06u
+X6 vout_n vout_p vp vp sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=4e+06u l=1e+06u
+X7 vp vout_p vout_n vp sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=4e+06u l=1e+06u
+X8 vout_p vout_n vp vp sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=4e+06u l=1e+06u
+X9 vout_n vout_p vp vp sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=4e+06u l=1e+06u
+X10 vp curgate vp vp sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5.4e+06u l=1e+06u
+X11 vp curgate vp vp sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5.4e+06u l=1e+06u
+X12 vp curgate vp vp sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5.4e+06u l=1e+06u
+X13 vp curgate vp vp sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5.4e+06u l=1e+06u
+X14 vp curgate vp vp sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5.4e+06u l=1e+06u
+C0 vout_n vout_p 2.20fF
+C1 vout_p vp 3.49fF **FLOATING
+C2 vout_n vp 3.33fF **FLOATING
+C3 nwell vp 14.96fF **FLOATING
+C4 curgate vp 4.16fF **FLOATING

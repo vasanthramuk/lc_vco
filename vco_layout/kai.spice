@@ -1,0 +1,23 @@
+* SPICE3 file created from kai.ext - technology: sky130A
+
+X0 curgate curgate gnd2 gnd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5.4e+06u l=1e+06u
+X1 vp curgate gnd2 gnd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5.4e+06u l=1e+06u
+X2 vp curgate gnd2 gnd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5.4e+06u l=1e+06u
+X3 gnd2 vout_p vout_n gnd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=4e+06u l=1e+06u
+X4 vp curgate gnd2 gnd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5.4e+06u l=1e+06u
+X5 vout_p vout_n gnd2 gnd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=4e+06u l=1e+06u
+X6 curgate curgate gnd2 gnd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5.4e+06u l=1e+06u
+X7 vout_p vout_n gnd2 gnd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=4e+06u l=1e+06u
+X8 gnd2 vout_n vout_p gnd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=4e+06u l=1e+06u
+X9 vp curgate gnd2 gnd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5.4e+06u l=1e+06u
+X10 vp curgate gnd2 gnd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5.4e+06u l=1e+06u
+X11 gnd2 vout_p vout_n gnd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=4e+06u l=1e+06u
+X12 vout_n vout_p gnd2 gnd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=4e+06u l=1e+06u
+X13 vout_n vout_p gnd2 gnd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=4e+06u l=1e+06u
+X14 gnd2 vout_n vout_p gnd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=4e+06u l=1e+06u
+C0 vout_p vout_n 2.20fF
+C1 vout_p gnd2 3.46fF **FLOATING
+C2 vout_n gnd2 3.28fF **FLOATING
+C3 vp gnd2 3.04fF **FLOATING
+C4 curgate gnd2 4.02fF **FLOATING
+C5 nwell gnd2 14.75fF **FLOATING

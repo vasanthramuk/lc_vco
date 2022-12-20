@@ -1,0 +1,11 @@
+* SPICE3 file created from harisha.ext - technology: sky130A
+
+X0 curgate curgate gnd2 gnd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5.4e+06u l=1e+06u
+X1 curgate curgate gnd2 gnd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5.4e+06u l=1e+06u
+X2 abc curgate gnd2 gnd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5.4e+06u l=1e+06u
+X3 abc curgate gnd2 gnd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5.4e+06u l=1e+06u
+X4 abc curgate gnd2 gnd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5.4e+06u l=1e+06u
+X5 abc curgate gnd2 gnd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5.4e+06u l=1e+06u
+X6 abc curgate gnd2 gnd2 sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5.4e+06u l=1e+06u
+C0 abc gnd2 2.58fF **FLOATING
+C1 curgate gnd2 4.00fF **FLOATING
