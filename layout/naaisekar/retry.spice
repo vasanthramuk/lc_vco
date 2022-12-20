@@ -1,0 +1,19 @@
+* SPICE3 file created from retry.ext - technology: sky130A
+
+X0 curgate curgate sky130_fd_pr__nfet_01v8_NFC7VK_0/a_n158_n1189# body sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5.4e+06u l=1e+06u
+X1 curgate curgate sky130_fd_pr__nfet_01v8_NFC7VK_0/a_n158_n1189# body sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5.4e+06u l=1e+06u
+X2 sky130_fd_pr__nfet_01v8_TPE47J_0/a_487_n909# sky130_fd_pr__nfet_01v8_TPE47J_0/a_287_n997# sky130_fd_pr__nfet_01v8_TPE47J_0/a_229_n909# body sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=4e+06u l=1e+06u
+X3 sky130_fd_pr__nfet_01v8_TPE47J_0/a_n29_109# sky130_fd_pr__nfet_01v8_TPE47J_0/a_n229_21# sky130_fd_pr__nfet_01v8_TPE47J_0/a_n287_109# body sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=4e+06u l=1e+06u
+X4 sky130_fd_pr__nfet_01v8_TPE47J_0/a_229_109# sky130_fd_pr__nfet_01v8_TPE47J_0/a_29_21# sky130_fd_pr__nfet_01v8_TPE47J_0/a_n29_109# body sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=4e+06u l=1e+06u
+X5 sky130_fd_pr__nfet_01v8_TPE47J_0/a_487_109# sky130_fd_pr__nfet_01v8_TPE47J_0/a_287_21# sky130_fd_pr__nfet_01v8_TPE47J_0/a_229_109# body sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=4e+06u l=1e+06u
+X6 sky130_fd_pr__nfet_01v8_TPE47J_0/a_229_n909# sky130_fd_pr__nfet_01v8_TPE47J_0/a_29_n997# sky130_fd_pr__nfet_01v8_TPE47J_0/a_n29_n909# body sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=4e+06u l=1e+06u
+X7 sky130_fd_pr__nfet_01v8_TPE47J_0/a_n29_n909# sky130_fd_pr__nfet_01v8_TPE47J_0/a_n229_n997# sky130_fd_pr__nfet_01v8_TPE47J_0/a_n287_n909# body sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=4e+06u l=1e+06u
+X8 sky130_fd_pr__nfet_01v8_TPE47J_0/a_n287_109# sky130_fd_pr__nfet_01v8_TPE47J_0/a_n487_21# sky130_fd_pr__nfet_01v8_TPE47J_0/a_n545_109# body sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=4e+06u l=1e+06u
+X9 sky130_fd_pr__nfet_01v8_TPE47J_0/a_n287_n909# sky130_fd_pr__nfet_01v8_TPE47J_0/a_n487_n997# sky130_fd_pr__nfet_01v8_TPE47J_0/a_n545_n909# body sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=4e+06u l=1e+06u
+X10 sky130_fd_pr__nfet_01v8_F8A7VK_0/a_100_n3136# curgate sky130_fd_pr__nfet_01v8_F8A7VK_0/a_n158_n3136# body sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5.4e+06u l=1e+06u
+X11 sky130_fd_pr__nfet_01v8_F8A7VK_0/a_100_n3136# curgate sky130_fd_pr__nfet_01v8_F8A7VK_0/a_n158_n3136# body sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5.4e+06u l=1e+06u
+X12 sky130_fd_pr__nfet_01v8_F8A7VK_0/a_100_n3136# curgate sky130_fd_pr__nfet_01v8_F8A7VK_0/a_n158_n3136# body sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5.4e+06u l=1e+06u
+X13 sky130_fd_pr__nfet_01v8_F8A7VK_0/a_100_n3136# curgate sky130_fd_pr__nfet_01v8_F8A7VK_0/a_n158_n3136# body sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5.4e+06u l=1e+06u
+X14 sky130_fd_pr__nfet_01v8_F8A7VK_0/a_100_n3136# curgate sky130_fd_pr__nfet_01v8_F8A7VK_0/a_n158_n3136# body sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=5.4e+06u l=1e+06u
+C0 nwell body 14.16fF **FLOATING
+C1 curgate body 3.60fF **FLOATING
