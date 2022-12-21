@@ -1,31 +1,31 @@
-timestamp 1671534598
+timestamp 1671556813
 version 8.3
 tech sky130A
 style ngspice()
 scale 1000 1 500000
 resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
 parameters sky130_fd_pr__nfet_01v8 l=l w=w a1=as p1=ps a2=ad p2=pd
-node "vout_p" 6290 3456.71 2397 2375 p 0 0 0 0 0 0 0 0 92800 3432 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 780800 9408 0 0 109572 7116 172056 5566 76104 1212 0 0 0 0 0 0 0 0
-node "vout_n" 6283 3276.13 2397 3393 p 0 0 0 0 0 0 0 0 92800 3432 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 780800 9408 0 0 110724 7136 169550 5456 78012 1184 0 0 0 0 0 0 0 0
-node "curgate" 8132 4149.09 141 6821 p 0 0 0 0 0 0 0 0 125280 4552 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1800400 18804 0 0 114277 6462 88425 1696 0 0 0 0 0 0 0 0 0 0
-node "nwell" 36333 14846.7 1532 1826 nw 0 0 0 0 3400864 20464 0 0 1472300 20512 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1971479 20990 0 0 0 0 0 0 0 0 0 0 0 0
-substrate "vp" 0 0 -919 7943 ppd 0 0 0 0 0 0 0 0 1030080 37608 938888 54994 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2139945 94178 1940606 15942 0 0 0 0 0 0 0 0 0 0
+node "vout_p" 6290 3456.61 2397 2375 p 0 0 0 0 0 0 0 0 92800 3432 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 780800 9408 0 0 109572 7116 172056 5566 76104 1212 0 0 0 0 0 0 0 0
+node "vout_n" 6283 3276.2 2397 3393 p 0 0 0 0 0 0 0 0 92800 3432 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 780800 9408 0 0 110724 7136 169550 5456 78012 1184 0 0 0 0 0 0 0 0
+node "gate" 8231 4225.5 141 6821 p 0 0 0 0 0 0 0 0 125280 4552 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1800400 18804 0 0 121009 6926 91305 1724 0 0 0 0 0 0 0 0 0 0
+node "nwell" 36333 14846.4 1532 1826 nw 0 0 0 0 3400864 20464 0 0 1472300 20512 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1971479 20990 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "gndmain" 0 0 -919 7943 ppd 0 0 0 0 0 0 0 0 1030080 37608 938888 54994 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2139945 94178 2040028 14106 0 0 0 0 0 0 0 0 0 0
 cap "vout_p" "nwell" 617.811
 cap "vout_n" "vout_p" 2203.52
+cap "gate" "nwell" 42.5763
 cap "vout_n" "nwell" 586.847
-cap "nwell" "curgate" 42.5763
-device msubckt sky130_fd_pr__nfet_01v8 3171 2463 3172 2464 l=200 w=800 "vp" "vout_p" 400 0 "vout_n" 800 0 "vp" 800 0
-device msubckt sky130_fd_pr__nfet_01v8 2913 2463 2914 2464 l=200 w=800 "vp" "vout_p" 400 0 "vp" 800 0 "vout_n" 800 0
-device msubckt sky130_fd_pr__nfet_01v8 2655 2463 2656 2464 l=200 w=800 "vp" "vout_p" 400 0 "vout_n" 800 0 "vp" 800 0
-device msubckt sky130_fd_pr__nfet_01v8 2397 2463 2398 2464 l=200 w=800 "vp" "vout_p" 400 0 "vp" 800 0 "vout_n" 800 0
-device msubckt sky130_fd_pr__nfet_01v8 3171 3481 3172 3482 l=200 w=800 "vp" "vout_n" 400 0 "vout_p" 800 0 "vp" 800 0
-device msubckt sky130_fd_pr__nfet_01v8 2913 3481 2914 3482 l=200 w=800 "vp" "vout_n" 400 0 "vp" 800 0 "vout_p" 800 0
-device msubckt sky130_fd_pr__nfet_01v8 2655 3481 2656 3482 l=200 w=800 "vp" "vout_n" 400 0 "vout_p" 800 0 "vp" 800 0
-device msubckt sky130_fd_pr__nfet_01v8 2397 3481 2398 3482 l=200 w=800 "vp" "vout_n" 400 0 "vp" 800 0 "vout_p" 800 0
-device msubckt sky130_fd_pr__nfet_01v8 143 157 144 158 l=200 w=1080 "vp" "curgate" 400 0 "vp" 2160 0 "vp" 0 0
-device msubckt sky130_fd_pr__nfet_01v8 143 1455 144 1456 l=200 w=1080 "vp" "curgate" 400 0 "vp" 2160 0 "vp" 0 0
-device msubckt sky130_fd_pr__nfet_01v8 143 2753 144 2754 l=200 w=1080 "vp" "curgate" 400 0 "vp" 2160 0 "vp" 0 0
-device msubckt sky130_fd_pr__nfet_01v8 143 4051 144 4052 l=200 w=1080 "vp" "curgate" 400 0 "vp" 2160 0 "vp" 0 0
-device msubckt sky130_fd_pr__nfet_01v8 143 5349 144 5350 l=200 w=1080 "vp" "curgate" 400 0 "vp" 2160 0 "vp" 0 0
-device msubckt sky130_fd_pr__nfet_01v8 141 6909 142 6910 l=200 w=1080 "vp" "curgate" 400 0 "vp" 1080 0 "curgate" 1080 0
-device msubckt sky130_fd_pr__nfet_01v8 141 8207 142 8208 l=200 w=1080 "vp" "curgate" 400 0 "vp" 1080 0 "curgate" 1080 0
+device msubckt sky130_fd_pr__nfet_01v8 3171 2463 3172 2464 l=200 w=800 "gndmain" "vout_p" 400 0 "vout_n" 800 0 "gndmain" 800 0
+device msubckt sky130_fd_pr__nfet_01v8 2913 2463 2914 2464 l=200 w=800 "gndmain" "vout_p" 400 0 "gndmain" 800 0 "vout_n" 800 0
+device msubckt sky130_fd_pr__nfet_01v8 2655 2463 2656 2464 l=200 w=800 "gndmain" "vout_p" 400 0 "vout_n" 800 0 "gndmain" 800 0
+device msubckt sky130_fd_pr__nfet_01v8 2397 2463 2398 2464 l=200 w=800 "gndmain" "vout_p" 400 0 "gndmain" 800 0 "vout_n" 800 0
+device msubckt sky130_fd_pr__nfet_01v8 3171 3481 3172 3482 l=200 w=800 "gndmain" "vout_n" 400 0 "vout_p" 800 0 "gndmain" 800 0
+device msubckt sky130_fd_pr__nfet_01v8 2913 3481 2914 3482 l=200 w=800 "gndmain" "vout_n" 400 0 "gndmain" 800 0 "vout_p" 800 0
+device msubckt sky130_fd_pr__nfet_01v8 2655 3481 2656 3482 l=200 w=800 "gndmain" "vout_n" 400 0 "vout_p" 800 0 "gndmain" 800 0
+device msubckt sky130_fd_pr__nfet_01v8 2397 3481 2398 3482 l=200 w=800 "gndmain" "vout_n" 400 0 "gndmain" 800 0 "vout_p" 800 0
+device msubckt sky130_fd_pr__nfet_01v8 143 157 144 158 l=200 w=1080 "gndmain" "gate" 400 0 "gndmain" 2160 0 "gndmain" 0 0
+device msubckt sky130_fd_pr__nfet_01v8 143 1455 144 1456 l=200 w=1080 "gndmain" "gate" 400 0 "gndmain" 2160 0 "gndmain" 0 0
+device msubckt sky130_fd_pr__nfet_01v8 143 2753 144 2754 l=200 w=1080 "gndmain" "gate" 400 0 "gndmain" 2160 0 "gndmain" 0 0
+device msubckt sky130_fd_pr__nfet_01v8 143 4051 144 4052 l=200 w=1080 "gndmain" "gate" 400 0 "gndmain" 2160 0 "gndmain" 0 0
+device msubckt sky130_fd_pr__nfet_01v8 143 5349 144 5350 l=200 w=1080 "gndmain" "gate" 400 0 "gndmain" 2160 0 "gndmain" 0 0
+device msubckt sky130_fd_pr__nfet_01v8 141 6909 142 6910 l=200 w=1080 "gndmain" "gate" 400 0 "gndmain" 1080 0 "gate" 1080 0
+device msubckt sky130_fd_pr__nfet_01v8 141 8207 142 8208 l=200 w=1080 "gndmain" "gate" 400 0 "gndmain" 1080 0 "gate" 1080 0
